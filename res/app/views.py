@@ -138,6 +138,8 @@ def add_to_cart():
 
 	set_value(current_user, 'buyer', item_id)
 
+	print(current_user)
+
 	return jsonify(buyers = buyers)
 
 @app.route('/view_item/<item_id>', methods=['GET', 'POST'])
