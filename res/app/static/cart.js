@@ -104,13 +104,6 @@ var get_previous = function(){
     return localStorage.getItem("previous");
 }
 
-var back = function(){
-
-    $('.back').on('click', function(){
-
-        location.href = get_previous()
-    })
-}
 
 var set_previous = function() {
 
@@ -127,6 +120,5 @@ $(document).ready(function(){
 
 	get_cart_items()
 	home()
-    back()
     set_previous()
 })
