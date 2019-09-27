@@ -89,16 +89,11 @@ def buy_category(search_category):
 
 	category_items = []
 
-	for item in items:
-		for key, value in item.items():
-			if (key == 'categories'):
-				for category in value:
-					if (category == search_category):
-						add_to_list(category_items, item, len(category_items))
+	get_items_by_category(items, search_category, category_items)
 
 	if request.method == 'POST':
 
-		search(buyers_search_items)
+		search(buyers_search_items, category_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
