@@ -1,0 +1,291 @@
+body {
+	font-size: 11pt;
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+}
+
+a {
+    text-decoration:  none;
+}
+
+a:hover {
+    text-decoration:  none;
+}
+
+a:visited {
+    text-decoration:  none;
+}
+
+input[placeholder]{
+    text-overflow: ellipsis;
+    font-size: small;
+    min-width: 256px;
+}
+
+small {
+    color: #6c757d;
+}
+
+hr {
+    border: solid 1px;
+    border-color: rgb(245, 245, 245, 0.8);
+}
+
+.btn-secondary{
+    background-color: #b2b2b2;
+    border-color: #b2b2b2;
+}
+
+.navbar{
+    top: 0px !important;
+    width: 100%;
+    z-index: 3;
+    box-shadow: 0px 2px 3px rgb(205, 205, 205, 0.8);
+}
+
+.banner {
+    min-height: 700px;
+    background-image: url(../images/banner_0.png);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
+    top: -30px;
+    box-shadow: 0px 3px 5px rgb(240, 240, 240, 0.8);
+    transition: background-image 0.5s ease-in;
+} 
+
+.banner-text {
+    color: #f8f9fa;
+    text-shadow: 1px 2px 5px rgb(155, 155, 155, 0.5);
+    font-size: 42px;
+    font-weight: bold;
+    position: absolute;
+    top: 5%;
+}
+
+.banner-wrapper {
+    min-height: 750px;
+}
+
+.container-fluid{
+    top: 50px;
+}
+
+.brand-img {
+    height: 32px;
+    opacity: 0.9;
+}
+
+.brand-title {
+    font-weight: bold;
+    color: #17a2b8;
+}
+
+.brand-img:hover {
+    opacity: .9;
+}
+
+.brand-title:hover {
+    opacity: 0.6;
+}
+
+.item-img {
+    max-height: 400px;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.item-thumbnail {
+    height: 175px;
+    border-radius: 10px;
+    opacity: 0.9;
+    transition: opacity .25s ease-in-out;;
+}
+
+.item-thumbnail:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.item-mini {
+    max-height: 100px;
+    max-width: 100px;
+    border-radius: 3px;
+}
+
+.title {
+	font-size: 28px;
+	font-weight: bold;
+}
+
+.location {
+	font-size: 16px;
+}
+
+.price {
+	font-size: 24px;
+}
+
+.btn-info:hover {
+    background-color: #ffffff;
+    color: #17a2b8;
+}
+
+.btn-secondary:hover {
+    background-color: #ffffff;
+    color: #6c757d;
+}
+
+.add_to_cart.btn-outline-info {
+    border-radius: 0px;
+    border: none;
+    font-weight: bold;
+
+}
+
+.view.btn-outline-secondary {
+    border-radius: 0px;
+    border: none;
+    font-weight: bold;
+
+}
+
+.view {
+    border-radius: 0px;
+}
+
+.remove {
+    border-radius: 0px;
+}
+
+.cart.btn {
+    border-radius: 0px;
+    box-shadow: 1px 1px 1px rgb(140, 140, 140, 0.5);
+}
+
+.home.btn {
+    border-radius: 0px;
+}
+
+.back.btn {
+    border-radius: 0px;
+}
+
+.item {
+    min-width: 280px !important;
+    max-width: 280px !important;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgb(240, 240, 240, 0.8);
+}
+
+.item_title {
+    height: 24px !important;
+    font-size: small;
+}
+
+.buy_price {
+    color: red;
+    font-size: 18px;
+}
+
+.sell_price {
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.cart_price {
+    color: red;
+    font-size: 18px;
+}
+
+.text-muted {
+    color: #9a9b9e !important;
+}
+
+.update  {
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.delete  {
+    border-radius: 0px;
+    font-weight: bold;
+}
+
+.cancel  {
+    border-radius: 0px;
+}
+
+.add_to_cart  {
+    border-radius: 0px;
+}
+
+.contact  {
+    border-radius: 0px;
+}
+
+.title-menu-item:hover {
+    opacity: 0.2;
+    text-shadow: 0px 2px 30px rgba(140, 140, 140, 0.6);
+}
+
+.dropdown-item {
+    font-size: small;
+}
+
+#home {
+
+    background-image: url()
+}
+
+#cart {
+    list-style: none;
+}
+
+#buy {
+    width: 200px;
+}
+
+#sell {
+    width: 200px;
+}
+
+#brand-img-home {
+    height: 72px;
+    opacity: 1;
+}
+
+#brand-title-home {
+    font-weight: bold;
+    font-size: 64px;
+}
+
+#brand-title-home:hover {
+    opacity: 0.6;
+    color: #17a2b8;
+}
+
+#brand-img-home:hover {
+    opacity: 1;
+}
+
+#clear:hover {
+    background-color: white;
+    text-decoration: underline;
+    border: none;
+    color: #6c757d;
+}
+
+#search_input[placeholder] {
+    color: #f8f9fa;
+    font-style: italic;
+}
+
+
+

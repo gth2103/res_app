@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <img class="brand-img ml-4" src="../static/images/brand_img.png">
+    <a class="navbar-brand brand" href="../home">
+        <span class="brand-title">
+            RES
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="../add_item" tabindex="-1" aria-disabled="false">Add Item</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="../buy" tabindex="-1" aria-disabled="false">Buy</a>
+            </li>
+        </ul>
+    <div>
+</nav>
+<div class="container-fluid position-relative m-0 pl-0 pr-2">
+    <div class="row pl-5">
+        <div class="col mb-3">
+            <h5 class="text-uppercase mb-3">
+                Your Items
+            </h5>
+            <hr>
+            <form class="form-inline mt-3 mb-0">
+                <input id="search_input" class="form-control mr-2" type="search" placeholder="keyword, borough, or Zip Code" aria-label="Search">
+                <button id="search" class="btn btn-info my-2" type="submit">
+                    Search
+                </button>
+                <button id="clear" class="btn btn-outline-secondary border-0 my-2 ml-4" type="submit">
+                    Clear Search Results
+                </button>
+            </form>
+            <small class="m-2">
+                Try searching to narrow your results.
+            </small>
+        </div>
+    </div>
+    <div id="items" class="row pl-4 bg-light justify-content-center">
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+
+        <script type="text/javascript" src="{{ url_for('static', filename = 'sell.js') }}"></script>
+
+        <script type="text/javascript">
+            var items = {{items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var sellers_search_items = {{sellers_search_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var current_user = {{current_user|tojson|safe}}
+        </script>
+
+{% endblock %}
