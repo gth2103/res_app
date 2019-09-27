@@ -54,7 +54,7 @@ def buy():
 
 	if request.method == 'POST':
 
-		search(buyers_search_items)
+		search(buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -72,7 +72,7 @@ def all():
 
 	if request.method == 'POST':
 
-		search(buyers_search_items)
+		search(buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
