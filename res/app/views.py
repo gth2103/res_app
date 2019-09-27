@@ -1,7 +1,7 @@
 import logging
 from flask import render_template, Response, request, jsonify, redirect, url_for
 from app import app
-from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id
+from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id, get_items_by_category
 from app.buyers import buyers, buyers_index, buyers_search_items
 from app.items import items, items_index
 from app.users import users, users_index, current_user
