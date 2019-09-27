@@ -1,8 +1,8 @@
 {% extends 'base.html' %}
 {% block content %}
 <nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
-    <img class="brand-img ml-4" src="../static/images/brand_img.png">
-    <a class="navbar-brand brand" href="../">
+    <img class="brand-img ml-4" src="../..static/images/brand_img.png">
+    <a class="navbar-brand brand" href="../..">
         <span class="brand-title">
             RES
         </span>
@@ -19,7 +19,7 @@
                     Categories
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="../buy">All Items</a>
+                    <a class="dropdown-item" href="../../buy">All Items</a>
                     <div class="dropdown-divider"></div>
                     <a class="dropdown-item" href="#">Household</a>
                     <a class="dropdown-item" href="#">Furniture</a>
@@ -29,7 +29,7 @@
                 </div>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="../sell" tabindex="-1" aria-disabled="false">Sell</a>
+                <a class="nav-link" href="../..sell" tabindex="-1" aria-disabled="false">Sell</a>
             </li>
         </ul>
         <button class="cart btn btn-secondary my-2 mr-5 py-0" type="submit">
@@ -51,36 +51,45 @@
     </div>
     <div class="row pl-5">
         <div class="col mb-3">
+            <h5 class="text-uppercase text-dark mb-3 mr-5 d-inline">
+                All Items
+            </h5>
             <span class="title-menu justify-content-center">
-                <a id="household" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="./all">
-                    All items
-                </a>
-                <a id="household" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="./household">
+                <a id="household" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="#">
                     Household
                 </a>
-                <a id="furniture" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="./furniture">
+                <a id="furniture" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="#">
                     Furniture
                 </a>
-                <a id="electronics" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="./electronics">
+                <a id="electronics" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="#">
                     Electronics
                 </a>
-                <a id="appliances" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="./appliances">
+                <a id="appliances" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="#">
                     Appliances
                 </a>
                 <a id="tools" class="title-menu-item m-5 p-4 text-secondary font-weight-bold" href="#">
                     Tools
                 </a>
             </span>
-            <hr class="mt-4 mb-4">
+            <hr class="mt-4">
+            <form class="form-inline mt-3 mb-0">
+                <input id="search_input" class="text-secondary bg-light border-0 form-control mr-2" type="search" placeholder="Enter a keyword, location, or Zip Code" aria-label="Search">
+                <button id="search" class="btn btn-info my-2" type="submit">
+                    Search
+                </button>
+            </form>
+            <small class="m-2">
+                Try searching to narrow your results.
+            </small>
         </div>
     </div>
-    <div id="advetisements" class="row pl-4 bg-light justify-content-center">
+    <div id="items" class="row pl-4 bg-light justify-content-center">
     </div>
 </div>
 {% endblock %}
 {% block javascript %}
 
-        <script type="text/javascript" src="{{ url_for('static', filename = 'buy.js') }}"></script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'all.js') }}"></script>
 
         <script type="text/javascript">
             var items = {{items|tojson|safe}}

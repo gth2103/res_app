@@ -1,7 +1,7 @@
 import logging
 from flask import render_template, Response, request, jsonify, redirect, url_for
 from app import app
-from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search
+from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id
 from app.buyers import buyers, buyers_index, buyers_search_items
 from app.items import items, items_index
 from app.users import users, users_index, current_user
@@ -19,9 +19,15 @@ def sell():
 
 	sellers_search_items = []
 
+	seller_item_ids = get_value(current_user, 'items_list')
+
+	seller_items = []
+
+	get_items_by_id(items, seller_item_ids, seller_items)
+
 	if request.method == 'POST':
 
-		search(sellers_search_items)
+		search(sellers_search_items, items)
 
 		return jsonify(sellers_search_items = sellers_search_items)
 	else:
@@ -53,6 +59,24 @@ def buy():
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
 		return render_template('buy.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
+
+@app.route('/buy/all', methods=['GET', 'POST'])
+def all():
+	global items
+	global current_user
+	global users
+	global buyers_search_items
+
+	category_items = []
+
+
+	if request.method == 'POST':
+
+		search(buyers_search_items)
+
+		return jsonify(buyers_search_items = buyers_search_items)
+	else:
+		return render_template('all.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
 
 @app.route('/buy/<search_category>', methods=['GET', 'POST'])
 def buy_category(search_category):
