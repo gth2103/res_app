@@ -96,7 +96,7 @@ var view = function(){
 var home = function(){
 
 	$('.home').on('click', function(){
-		window.location = '../home'
+		window.location = '../'
 	})
 }
 

@@ -81,7 +81,7 @@ var add_item_to_cart = function(new_item){
 var home = function(){
 
 	$('.home').on('click', function(){
-		window.location = '../home'
+		window.location = '../'
 	})
 }
 

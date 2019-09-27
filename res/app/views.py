@@ -7,7 +7,7 @@ from app.items import items, items_index
 from app.users import users, users_index, current_user
 from app.sellers import sellers_search_items
 
-@app.route('/home', methods=['GET', 'POST'])
+@app.route('/', methods=['GET', 'POST'])
 def home():
 	return render_template('home.html')
 
