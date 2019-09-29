@@ -23,6 +23,7 @@ a:visited {
 
 a.disabled {
     pointer-events: none;
+    cursor: default;
     opacity: 0.8;
 }
 
