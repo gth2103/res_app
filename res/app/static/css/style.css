@@ -21,6 +21,11 @@ a:visited {
     text-decoration:  none;
 }
 
+a.disabled {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
 input[placeholder]{
     text-overflow: ellipsis;
     font-size: small;
