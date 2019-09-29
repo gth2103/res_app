@@ -230,6 +230,10 @@ hr {
     border-radius: 0px;
 }
 
+.title-menu {
+    line-height: 3em;
+}
+
 .title-menu-item:hover {
     opacity: 0.2;
     text-shadow: 0px 2px 30px rgba(140, 140, 140, 0.6);
