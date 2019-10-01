@@ -4,7 +4,7 @@ var go_to_category = function(category){
         url: "buy/" + category,                
         success: function(result){
             console.log(result)
-            window.location = /buy/. + category
+            window.location = /buy/ + category
         },
         error: function(request, status, error){
             alert("Oops! Something went wrong. Please try again.")
