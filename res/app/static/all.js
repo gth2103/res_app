@@ -120,9 +120,9 @@ var add_item_to_cart = function(new_item){
 var view_item = function(item_id){
     $.ajax({
         type: "POST",
-        url: "view_item/" + item_id,                
+        url: "/view_item/" + item_id,                
         success: function(result){
-        	window.location = '../item/' + item_id
+        	window.location = '/item/' + item_id
         },
         error: function(request, status, error){
         	alert("Oops! Something went wrong. Please try again.")
@@ -137,7 +137,7 @@ var view_item = function(item_id){
 var filter = function(category){
     $.ajax({
         type: "POST",
-        url: "buy/" + category,                
+        url: "/buy/" + category,                
         success: function(result){
             console.log(result)
             var search_items = result["category_items"]
