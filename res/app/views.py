@@ -61,7 +61,7 @@ def buy():
 		return render_template('buy.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
 
 @app.route('/buy/<search_category>', methods=['GET', 'POST'])
-def all():
+def category(search_category):
 	global items
 	global current_user
 	global users
