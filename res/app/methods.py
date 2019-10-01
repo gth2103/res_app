@@ -37,8 +37,8 @@ def search(search_list_out, search_list_in):
 	for item in search_list_in:
 		for key, value in item.items():
 			if key ==  'title' or key == 'location' or key == 'details':
-				if search_in.lower() in value.lower() and item not in search_list:
-					add_to_list(search_list, item, len(search_list))
+				if search_in.lower() in value.lower() and item not in search_list_out:
+					add_to_list(search_list_out, item, len(search_list_out))
 
 def get_items_by_id(item_list_in, item_id_list, item_list_out):
 	for item in item_list_in:
