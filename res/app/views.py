@@ -49,16 +49,7 @@ def buy():
 	global users
 	global buyers_search_items
 
-	category_items = []
-
-
-	if request.method == 'POST':
-
-		search(buyers_search_items, items)
-
-		return jsonify(buyers_search_items = buyers_search_items)
-	else:
-		return render_template('buy.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
+	return render_template('buy.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
 
 @app.route('/buy/all', methods=['GET', 'POST'])
 def all():
@@ -67,15 +58,13 @@ def all():
 	global users
 	global buyers_search_items
 
-	category_items = []
-
 	if request.method == 'POST':
 
-		search(buyers_search_items, category_items)
+		search(buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
-		return render_template('all.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
+		return render_template('all.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
 
 @app.route('/buy/household', methods=['GET', 'POST'])
 def household():
