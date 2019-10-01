@@ -1,7 +1,7 @@
 var go_to_category = function(category){
     $.ajax({
-        type: "POST",
-        url: "buy/" + category,                
+        type: "GET",
+        url: "/buy/" + category,                
         success: function(result){
             console.log(result)
             window.location = /buy/ + category
