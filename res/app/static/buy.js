@@ -38,7 +38,7 @@ var set_previous = function() {
 
     var pathname = window.location.pathname;
 
-    localStorage.setItem("previous", ".." + pathname);
+    localStorage.setItem("previous", pathname);
 
     console.log(pathname)
 
