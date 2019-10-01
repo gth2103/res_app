@@ -212,7 +212,7 @@ var thumbnail_view = function(){
 var cart = function(){
 
 	$('.cart').on('click', function(){
-		window.location = '../cart'
+		window.location = '/cart'
 	})
 }
 

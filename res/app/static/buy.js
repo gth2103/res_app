@@ -74,9 +74,17 @@ var category = function(){
 
 }
 
+var cart = function(){
+
+    $('.cart').on('click', function(){
+        window.location = '/cart'
+    })
+}
+
 $(document).ready(function(){
     do_slide_show()
     set_previous()
     categories_dropdown()
     category()
+    cart()
 })
