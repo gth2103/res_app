@@ -92,11 +92,7 @@
 {% endblock %}
 {% block javascript %}
 
-        <script type="text/javascript" src="{{ url_for('static', filename = 'all.js') }}"></script>
-
-        <script type="text/javascript">
-            var items = {{items|tojson|safe}}
-        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename = 'household.js') }}"></script>
 
         <script type="text/javascript">
             var category_items = {{category_items|tojson|safe}}
