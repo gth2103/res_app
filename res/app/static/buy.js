@@ -1,21 +1,3 @@
-var go_to_category = function(category){
-    $.ajax({
-        type: "GET",
-        url: "/buy/" + category,                
-        success: function(result){
-            console.log(result)
-            window.location = /buy/ + category
-        },
-        error: function(request, status, error){
-            alert("Oops! Something went wrong. Please try again.")
-            console.log("Error");
-            console.log(request)
-            console.log(status)
-            console.log(error)
-        }
-    });
-}
-
 const NUMBER_OF_BANNER_IMAGES = 9;
 
 var image_index = 0
@@ -61,17 +43,6 @@ var categories_dropdown = function(){
 
         $('.dropdown-menu').css('display', 'none')
     })
-}
-
-var category = function(){
-
-    $('.title-menu-item').on('click', function(){
-
-        var category = $(this).attr('id')
-
-        go_to_category(category)
-    })
-
 }
 
 var cart = function(){

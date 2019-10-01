@@ -78,27 +78,6 @@ def all():
 	else:
 		return render_template('all.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
 
-@app.route('/buy/<search_category>', methods=['GET', 'POST'])
-def buy_category(search_category):
-	global items
-	global current_user
-	global users
-	global buyers_search_items
-
-	search_category = str(search_category)
-
-	category_items = []
-
-	get_items_by_category(items, search_category, category_items)
-
-	if request.method == 'POST':
-
-		search(buyers_search_items, category_items)
-
-		return jsonify(buyers_search_items = buyers_search_items)
-	else:
-		return render_template('buy.html', items = items, category_items = category_items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
-
 
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():
