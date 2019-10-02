@@ -58,13 +58,25 @@ def all():
 	global users
 	global buyers_search_items
 
+	household_items = []
+	furniture_items = []
+	electronics_items = []
+	appliances_items = []
+	tools_items = []
+
+	get_items_by_category(items, 'household', household_items)
+	get_items_by_category(items, 'furniture', furniture_items)
+	get_items_by_category(items, 'electronics', electronics_items)
+	get_items_by_category(items, 'appliances', appliances_items)
+	get_items_by_category(items, 'tools', tools_items)
+
 	if request.method == 'POST':
 
 		search(buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
-		return render_template('all.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items)
+		return render_template('all.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
 
 @app.route('/buy/household', methods=['GET', 'POST'])
 def household():

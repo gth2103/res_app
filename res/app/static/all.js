@@ -44,32 +44,16 @@ var getItems = function(list){
     }
 }
 
-var add_icon = function(list){
+var add_icon = function(category, list){
 
     var min = 0
     var max = list.length
 
     var random_number = Math.floor(Math.random() * (+max - +min) + +min)
 
-    var div0 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+    var div = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
 
-    $('#household').prepend(div0)
-
-    var div1 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
-
-    $('#furniture').prepend(div1)
-
-    var div2 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
-
-    $('#electronics').prepend(div2)
-
-    var div3 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
-
-    $('#appliances').prepend(div3)
-
-    var div4 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
-
-    $('#tools').prepend(div4)
+    $('#' + category).prepend(div)
 }
 
 
@@ -310,6 +294,10 @@ $(document).ready(function(){
     do_slide_show()
     set_previous()
     categories_dropdown()
-    add_icon(items);
+    add_icon('household', household_items);
+    add_icon('furniture', furniture_items);
+    add_icon('appliances', appliances_items);
+    add_icon('electronics', electronics_items);
+    add_icon('tools', tools_items);
 
 })
