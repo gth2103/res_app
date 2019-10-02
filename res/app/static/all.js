@@ -44,6 +44,18 @@ var getItems = function(list){
     }
 }
 
+var add_icon = function(list){
+
+    var min = 0
+    var max = list.length
+
+    var random_number = Math.floor(Math.random() * (+max - +min) + +min)
+
+    var div = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '">'
+
+    $('#household').prepend(div)
+}
+
 
 var search = function(input){
     var input_to_search = input
@@ -282,5 +294,6 @@ $(document).ready(function(){
     do_slide_show()
     set_previous()
     categories_dropdown()
+    add_icon();
 
 })
