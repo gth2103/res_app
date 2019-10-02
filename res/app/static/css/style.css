@@ -42,6 +42,10 @@ hr {
     border-color: rgb(245, 245, 245, 0.8);
 }
 
+h5 {
+    min-width: 98px;
+}
+
 .alert_flash {
     top: -130px;
     min-width: 400px !important;
