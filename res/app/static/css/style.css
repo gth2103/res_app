@@ -278,6 +278,12 @@ hr {
     width: 200px;
 }
 
+#clear {
+    top: 80px;
+    right: 60px;
+    
+}
+
 #brand-img-home {
     height: 72px;
     opacity: 1;
