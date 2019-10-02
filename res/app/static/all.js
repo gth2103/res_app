@@ -117,7 +117,7 @@ var add_item_to_cart = function(new_item){
         success: function(result){
             console.log(result);
             var all_items = result["buyers"]
-            alert("Your item has been added! Click 'View Cart' in the menu to see it.")
+            alert_flash()
         },
         error: function(request, status, error){
         	alert("Oops! Something went wrong. Please try again.")
@@ -127,6 +127,19 @@ var add_item_to_cart = function(new_item){
             console.log(error)
         }
     });
+}
+
+var alert_flash = function(item){
+
+    $('#added_flash').removeClass('alert_show')
+    $('#added_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#added_flash').removeClass('alert_show')
+        $('#added_flash').addClass('alert_hide')
+    }, 5000)
+
+    clearTimeout(flash_timer)
 }
 
 var view_item = function(item_id){
