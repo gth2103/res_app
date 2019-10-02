@@ -294,6 +294,6 @@ $(document).ready(function(){
     do_slide_show()
     set_previous()
     categories_dropdown()
-    add_icon();
+    add_icon(items);
 
 })
