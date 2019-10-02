@@ -72,6 +72,8 @@ def all():
 
 	if request.method == 'POST':
 
+		buyers_search_items = []
+
 		search(buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
@@ -99,6 +101,8 @@ def household():
 
 	if request.method == 'POST':
 
+		buyers_search_items = []
+
 		search(buyers_search_items, household_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
@@ -125,6 +129,8 @@ def furniture():
 	get_items_by_category(items, 'tools', tools_items)
 
 	if request.method == 'POST':
+
+		buyers_search_items = []
 
 		search(buyers_search_items, furniture_items)
 
@@ -154,6 +160,8 @@ def electronics():
 
 	if request.method == 'POST':
 
+		buyers_search_items = []
+
 		search(buyers_search_items, electronics_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
@@ -182,12 +190,14 @@ def appliances():
 
 	if request.method == 'POST':
 
+		buyers_search_items = []
+
 		search(buyers_search_items, appliances_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
 		return render_template('appliances.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
-		
+
 
 @app.route('/buy/tools', methods=['GET', 'POST'])
 def tools():
@@ -209,6 +219,8 @@ def tools():
 	get_items_by_category(items, 'tools', tools_items)
 
 	if request.method == 'POST':
+
+		buyers_search_items = []
 
 		search(buyers_search_items, tools_items)
 
