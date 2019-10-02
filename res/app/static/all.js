@@ -51,7 +51,7 @@ var add_icon = function(list){
 
     var random_number = Math.floor(Math.random() * (+max - +min) + +min)
 
-    var div = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '">'
+    var div = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
 
     $('#household').prepend(div)
 }
