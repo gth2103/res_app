@@ -51,9 +51,25 @@ var add_icon = function(list){
 
     var random_number = Math.floor(Math.random() * (+max - +min) + +min)
 
-    var div = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+    var div0 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
 
-    $('#household').prepend(div)
+    $('#household').prepend(div0)
+
+    var div1 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+
+    $('#furniture').prepend(div1)
+
+    var div2 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+
+    $('#electronics').prepend(div2)
+
+    var div3 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+
+    $('#appliances').prepend(div3)
+
+    var div4 = '<img class="titel-menu-thumbnail mt-4 mb-4 rounded-circle" src="' + list[random_number].image + '"><br>'
+
+    $('#tools').prepend(div4)
 }
 
 
