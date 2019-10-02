@@ -118,16 +118,40 @@ var add_item_to_cart = function(new_item){
         success: function(result){
             console.log(result);
             var all_items = result["buyers"]
-            alert("Your item has been added! Click 'View Cart' in the menu to see it.")
+            added_flash()
         },
         error: function(request, status, error){
-        	alert("Oops! Something went wrong. Please try again.")
+        	error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
             console.log(error)
         }
     });
+}
+
+var added_flash = function(item){
+
+    $('#added_flash').removeClass('alert_show')
+    $('#added_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#added_flash').removeClass('alert_show')
+        $('#added_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var error_flash = function(item){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
 }
 
 var view_item = function(item_id){
