@@ -99,7 +99,7 @@ def household():
 
 	if request.method == 'POST':
 
-		search(buyers_search_items, category_items)
+		search(buyers_search_items, household_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:

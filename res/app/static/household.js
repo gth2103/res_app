@@ -152,8 +152,8 @@ var filter = function(category){
         url: "/buy/" + category,                
         success: function(result){
             console.log(result)
-            var search_items = result["category_items"]
-            getItems(category_items)
+            var search_items = result["buyers_search_items"]
+            getItems(search_items)
         },
         error: function(request, status, error){
             alert("Oops! Something went wrong. Please try again.")
