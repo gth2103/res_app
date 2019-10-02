@@ -105,6 +105,117 @@ def household():
 	else:
 		return render_template('household.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
 
+@app.route('/buy/furniture', methods=['GET', 'POST'])
+def furniture():
+	global items
+	global current_user
+	global users
+	global buyers_search_items
+
+	household_items = []
+	furniture_items = []
+	electronics_items = []
+	appliances_items = []
+	tools_items = []
+
+	get_items_by_category(items, 'household', household_items)
+	get_items_by_category(items, 'furniture', furniture_items)
+	get_items_by_category(items, 'electronics', electronics_items)
+	get_items_by_category(items, 'appliances', appliances_items)
+	get_items_by_category(items, 'tools', tools_items)
+
+	if request.method == 'POST':
+
+		search(buyers_search_items, furniture_items)
+
+		return jsonify(buyers_search_items = buyers_search_items)
+	else:
+		return render_template('furniture.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
+
+
+@app.route('/buy/electronics', methods=['GET', 'POST'])
+def electronics():
+	global items
+	global current_user
+	global users
+	global buyers_search_items
+
+	household_items = []
+	furniture_items = []
+	electronics_items = []
+	appliances_items = []
+	tools_items = []
+
+	get_items_by_category(items, 'household', household_items)
+	get_items_by_category(items, 'furniture', furniture_items)
+	get_items_by_category(items, 'electronics', electronics_items)
+	get_items_by_category(items, 'appliances', appliances_items)
+	get_items_by_category(items, 'tools', tools_items)
+
+	if request.method == 'POST':
+
+		search(buyers_search_items, electronics_items)
+
+		return jsonify(buyers_search_items = buyers_search_items)
+	else:
+		return render_template('electronics.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
+
+
+@app.route('/buy/appliances', methods=['GET', 'POST'])
+def appliances():
+	global items
+	global current_user
+	global users
+	global buyers_search_items
+
+	household_items = []
+	furniture_items = []
+	electronics_items = []
+	appliances_items = []
+	tools_items = []
+
+	get_items_by_category(items, 'household', household_items)
+	get_items_by_category(items, 'furniture', furniture_items)
+	get_items_by_category(items, 'electronics', electronics_items)
+	get_items_by_category(items, 'appliances', appliances_items)
+	get_items_by_category(items, 'tools', tools_items)
+
+	if request.method == 'POST':
+
+		search(buyers_search_items, appliances_items)
+
+		return jsonify(buyers_search_items = buyers_search_items)
+	else:
+		return render_template('appliances.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
+		
+
+@app.route('/buy/tools', methods=['GET', 'POST'])
+def tools():
+	global items
+	global current_user
+	global users
+	global buyers_search_items
+
+	household_items = []
+	furniture_items = []
+	electronics_items = []
+	appliances_items = []
+	tools_items = []
+
+	get_items_by_category(items, 'household', household_items)
+	get_items_by_category(items, 'furniture', furniture_items)
+	get_items_by_category(items, 'electronics', electronics_items)
+	get_items_by_category(items, 'appliances', appliances_items)
+	get_items_by_category(items, 'tools', tools_items)
+
+	if request.method == 'POST':
+
+		search(buyers_search_items, tools_items)
+
+		return jsonify(buyers_search_items = buyers_search_items)
+	else:
+		return render_template('tools.html', items = items, current_user = current_user, users = users, buyers_search_items = buyers_search_items, household_items = household_items, furniture_items = furniture_items, electronics_items = electronics_items, appliances_items = appliances_items, tools_items = tools_items)
+
 
 @app.route('/add_item', methods=['GET', 'POST'])
 def add_item():

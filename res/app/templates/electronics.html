@@ -1,0 +1,145 @@
+{% extends 'base.html' %}
+{% block content %}
+<nav class="navbar navbar-expand-lg navbar-light bg-light position-fixed">
+    <img class="brand-img ml-4" src="/static/images/brand_img.png">
+    <a class="navbar-brand brand" href="/">
+        <span class="brand-title">
+            RES
+        </span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/buy" tabindex="-1" aria-disabled="false">Buy</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" 
+                    aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/buy/all">All Items</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item disabled" href="/buy/household">Household</a>
+                    <a class="dropdown-item" href="/buy/furniture">Furniture</a>
+                    <a class="dropdown-item" href="/buy/electronics">Electronics</a>
+                    <a class="dropdown-item" href="/buy/appliances">Appliances</a>
+                    <a class="dropdown-item" href="/buy/tools">Tools</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/sell" tabindex="-1" aria-disabled="false">Sell</a>
+            </li>
+        </ul>
+        <button class="cart btn btn-secondary my-2 mr-5 py-0" type="submit">
+            View Cart
+        </button>
+    <div>
+</nav>
+<div class="container-fluid position-relative m-0 pl-0 pr-2">
+    <div class="row banner-wrapper">
+        <div class="col banner border-bottom border-light">
+            <span class="banner-text p-5">
+                The simplest way to buy
+                <br>
+                and sell your stuff
+                <br>
+                locally!
+            </span>
+        </div>
+    </div>
+    <div class="row pl-5">
+        <div class="col-12 col-sm-2 mb-3 text-center text-sm-left pl-4 pl-sm-3 mb-3 pt-4 mt-5">
+            <h5 class="text-uppercase text-dark mb-3 ml-1 mx-4 mx-sm-5 pl-0 pl-md-2">
+                Household
+            </h5>
+        </div>
+        <div class="col-12 col-sm-2 mb-3 text-center">
+            <a id="all" class="title-menu-item text-secondary font-weight-bold" href="/buy/all">
+                All Items
+                </a>
+        </div>
+        <div class="col-12 col-sm-2 mb-3 text-center">
+            <a id="furniture" class="title-menu-item text-secondary font-weight-bold" href="/buy/furniture">
+                Furniture
+            </a>
+        </div>
+        <div class="col-12 col-sm-2 mb-3 text-center">
+            <a id="electronics" class="title-menu-item text-secondary font-weight-bold" href="/buy/electronics">
+                Electronics
+            </a>
+        </div>
+        <div class="col-12 col-sm-2 mb-3 text-center">
+            <a id="appliances" class="title-menu-item text-secondary font-weight-bold" href="/buy/appliances">
+                Appliances
+            </a>
+        </div>
+        <div class="col-12 col-sm-2 mb-3 text-center">
+            <a id="tools" class="title-menu-item text-secondary font-weight-bold" href="/buy/tools">
+                Tools
+            </a>
+        </div>
+    </div>
+    <div class="row pl-5">
+        <div class="col text-center text-sm-left mb-3">
+            <hr class="mt-4">
+            <form class="form-inline justify-content-center justify-content-sm-start mt-3 mb-0">
+                <input id="search_input" class="text-secondary bg-light border-0 form-control mr-2" type="search" placeholder="Enter a keyword, location, or Zip Code" aria-label="Search">
+                <button id="search" class="btn btn-info my-2" type="submit">
+                    Search
+                </button>
+            </form>
+            <small class="m-2">
+                Try searching to narrow your results.
+            </small>
+        </div>
+    </div>
+    <div id="items" class="row pl-4 bg-light justify-content-center">
+    </div>
+</div>
+{% endblock %}
+{% block javascript %}
+
+        <script type="text/javascript" src="{{ url_for('static', filename = 'household.js') }}"></script>
+
+        <script type="text/javascript">
+            var items = {{items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var household_items = {{household_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var furniture_items = {{furniture_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var electronics_items = {{electronics_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var appliances_items = {{appliances_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var tools_items = {{tools_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var buyers_search_items = {{buyers_search_items|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var users = {{users|tojson|safe}}
+        </script>
+
+        <script type="text/javascript">
+            var current_user = {{current_user|tojson|safe}}
+        </script>
+
+{% endblock %}
