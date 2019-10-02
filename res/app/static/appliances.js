@@ -44,6 +44,7 @@ var getItems = function(list){
     }
 }
 
+
 var add_icon = function(category, list){
 
     var min = 0
@@ -289,6 +290,7 @@ var filter_search = function(){
 $(document).ready(function(){
 
     do_search()
+    do_clear()
 	getItems(household_items)
 	cart()
     do_slide_show()

@@ -289,6 +289,7 @@ var filter_search = function(){
 $(document).ready(function(){
 
     do_search()
+    do_clear()
 	getItems(items)
 	cart()
     do_slide_show()
