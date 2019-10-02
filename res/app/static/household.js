@@ -289,7 +289,7 @@ var filter_search = function(){
 $(document).ready(function(){
 
     do_search()
-	getItems(household)
+	getItems(household_items)
 	cart()
     do_slide_show()
     set_previous()
