@@ -138,7 +138,7 @@ var alert_flash = function(item){
         $('#added_flash').removeClass('alert_show')
         $('#added_flash').addClass('alert_hide')
         clearTimeout(flash_timer)
-    }, 5000)
+    }, 3500)
 }
 
 var view_item = function(item_id){
