@@ -117,7 +117,7 @@ var add_item_to_cart = function(new_item){
         success: function(result){
             console.log(result);
             var all_items = result["buyers"]
-            alert_flash()
+            added_flash()
         },
         error: function(request, status, error){
         	alert("Oops! Something went wrong. Please try again.")
@@ -129,7 +129,7 @@ var add_item_to_cart = function(new_item){
     });
 }
 
-var alert_flash = function(item){
+var added_flash = function(item){
 
     $('#added_flash').removeClass('alert_show')
     $('#added_flash').addClass('alert_show')
@@ -137,6 +137,18 @@ var alert_flash = function(item){
     var flash_timer = setTimeout(function(){
         $('#added_flash').removeClass('alert_show')
         $('#added_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var error_flash = function(item){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
         clearTimeout(flash_timer)
     }, 3500)
 }

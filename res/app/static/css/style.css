@@ -43,7 +43,7 @@ hr {
 }
 
 .alert_flash {
-    top: -114px;
+    top: -130px;
     min-width: 400px !important;
     height: 114px;
     border-radius: 5px;
@@ -55,7 +55,7 @@ hr {
 }
 
 .alert_hide {
-    top: -114px;
+    top: -130px;
 }
 
 .alert_show {
