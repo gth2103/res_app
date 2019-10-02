@@ -130,8 +130,6 @@ var add_item_to_cart = function(new_item){
 }
 
 var alert_flash = function(item){
-    
-    clearTimeout(flash_timer)
 
     $('#added_flash').removeClass('alert_show')
     $('#added_flash').addClass('alert_show')
@@ -139,7 +137,8 @@ var alert_flash = function(item){
     var flash_timer = setTimeout(function(){
         $('#added_flash').removeClass('alert_show')
         $('#added_flash').addClass('alert_hide')
-    }, 5000)
+        clearTimeout(flash_timer)
+    }, 3000)
 }
 
 var view_item = function(item_id){

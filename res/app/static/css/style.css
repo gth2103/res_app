@@ -49,6 +49,7 @@ hr {
     border-radius: 5px;
     box-shadow: 2px 3px 10px rgb(128, 128, 128, 0.9);
     transition: bottom 2s ease-in-out;
+    transition: top 2s ease-in-out;
     left: 50%;
     margin-left: -200px;
     z-index: 300;
