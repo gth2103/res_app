@@ -42,6 +42,24 @@ hr {
     border-color: rgb(245, 245, 245, 0.8);
 }
 
+.alert {
+    top: -100px;
+    min-width: 400px !important;
+    height: 100px;
+    overflow-y: hidden;
+    border-radius: 5px;
+    box-shadow: 2px 3px 5px rgb(240, 240, 240, 0.8);
+    transition: top 2s ease-in-out;
+}
+
+.alert_hide {
+    top: -100px;
+}
+
+.alert_show {
+    top: 0px;
+}
+
 .home-brand-wrapper{
     top: 35%;
     left: 50%;
