@@ -61,7 +61,7 @@ var search = function(input){
     var input_to_search = input
     $.ajax({
         type: "POST",
-        url: "/buy/household",                
+        url: "/buy/electronics",                
         dataType : "json",
         contentType: "text; charset=utf-8",
         data : input_to_search.toString(),
@@ -289,7 +289,7 @@ var filter_search = function(){
 $(document).ready(function(){
 
     do_search()
-	getItems(household_items)
+	getItems(electronics_items)
 	cart()
     do_slide_show()
     set_previous()
@@ -297,7 +297,7 @@ $(document).ready(function(){
     add_icon('all', items);
     add_icon('furniture', furniture_items);
     add_icon('appliances', appliances_items);
-    add_icon('electronics', electronics_items);
+    add_icon('household', household_items);
     add_icon('tools', tools_items);
 
 })
