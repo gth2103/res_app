@@ -99,8 +99,6 @@ h5 {
     color: #f8f9fa;
     text-shadow: 1px 1px 10px rgb(64, 64, 64, 0.8);
     font-size: 42px;
-    font-weight: bold;
-    position: absolute;
     top: 5%;
 }
 
@@ -292,13 +290,17 @@ h5 {
 
 #info_1 {
     background-color: #33b5e5;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 10px rgb(64, 64, 64, 0.8);
+    font-size: 42px;
+    top: 5%;
 }
 
-#info_1 {
+#info_2 {
     background-color: #ffbb33;
 }
 
-#info_1 {
+#info_3 {
     background-color: #ff4444;
 }
 
