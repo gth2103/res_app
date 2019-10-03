@@ -284,26 +284,42 @@ h5 {
 }
 
 .buy_info {
-    min-height: 850px;
+    min-height: 750px;
     opacity: 0.8;
     color: #f8f9fa;
     text-shadow: 0px 0px 1px rgb(64, 64, 64, 0.8);
     font-size: 32px;
 }
 
-#info_1 {
+#info_1_left {
     background-color: #0099CC;
 }
 
-#info_2 {
+#info_1_right {
+    background-image: url(../images/info_1.png);
+}
+
+#info_2_left {
+    background-image: url(../images/info_1.png);;
+}
+
+#info_2_right {
     background-color: #558b2f;
 }
 
-#info_3 {
+#info_3_left {
     background-color: #757575;
 }
 
-#info_4 {
+#info_3_right {
+    background-image: url(../images/info_1.png);;
+}
+
+#info_4_left {
+    background-image: url(../images/info_1.png);;
+}
+
+#info_4_right {
     background-color: #CC0000;
 }
 
