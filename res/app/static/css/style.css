@@ -284,7 +284,7 @@ h5 {
 }
 
 .buy_info {
-    height: 750px;
+    height: 800px;
     opacity: 0.8;
     color: #f8f9fa;
     text-shadow: 0px 0px 1px rgb(64, 64, 64, 0.8);
@@ -296,25 +296,25 @@ h5 {
 }
 
 #info_1_right {
-    background-image: url(../images/info_1.png);
+    background-image: url(../images/info_2.png);
     background-repeat: no-repeat;
 }
 
 #info_2_left {
-    background-image: url(../images/info_1.png);
+    background-image: url(../images/info_3.png);
     background-repeat: no-repeat;
 }
 
 #info_2_right {
-    background-color: #558b2f;
+    background-color: #e8dac4;
 }
 
 #info_3_left {
-    background-color: #757575;
+    background-color: #17a2b8;
 }
 
 #info_3_right {
-    background-image: url(../images/info_1.png);
+    background-image: url(../images/info_4.png);
     background-repeat: no-repeat;
 }
 
@@ -324,7 +324,7 @@ h5 {
 }
 
 #info_4_right {
-    background-color: #CC0000;
+    background-color: #6c757d;
 }
 
 #home {
