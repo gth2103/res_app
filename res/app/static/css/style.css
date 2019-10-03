@@ -69,7 +69,7 @@ h5 {
 .home-brand-wrapper{
     top: 35%;
     left: 50%;
-    margin-left: -219.5px;
+    margin-left: -218.5px;
 }
 
 .btn-secondary{
@@ -360,6 +360,12 @@ h5 {
 @media only screen and (max-width: 575.98px) {
     #clear {
         right: 15px;
+    }
+}
+
+@media only screen and (max-width: 375.98px) {
+    .home-brand-wrapper{
+        margin-left: -190.5px;
     }
 }
 
