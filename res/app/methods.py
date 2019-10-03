@@ -1,6 +1,7 @@
 from flask import request
 from app.users import current_user
 from app.items import items
+from ast import literal_eval
 
 def add_data(index):
 
@@ -61,9 +62,11 @@ def add_to_list(item_list, item, index):
 	file_in = open("/home/grant/res_app/res/seed.py", "r")
 	file_content_in = file_in.readlines()
 	file_in.close()
-	print(file_content_in[0])
 	file_out = open("/home/grant/res_app/res/seed.txt", "w")
 	file_content_out = "".join(file_content_in)
+	content = literal_eval(file_content_out)
+	print(content)
+	print(type(content))
 	file_out.write(file_content_out)
 	file_out.close()
 
