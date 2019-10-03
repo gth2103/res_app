@@ -65,7 +65,7 @@ def add_to_list(item_list, item, index):
 	file_out = open("/home/grant/res_app/res/items.txt", "w")
 	file_content_out = "".join(file_content_in)
 	content = literal_eval(file_content_out)
-	print(content)
+	print(content[0])
 	print(type(content))
 	file_out.write(file_content_out)
 	file_out.close()
