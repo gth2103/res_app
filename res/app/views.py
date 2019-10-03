@@ -279,8 +279,6 @@ def add_to_cart():
 
 	set_value(current_user, 'buyer', item_id)
 
-	print(current_user)
-
 	return jsonify(buyers = buyers)
 
 @app.route('/view_item/<item_id>', methods=['GET', 'POST'])
@@ -341,10 +339,6 @@ def delete(item_id):
 	global current_user
 	global items
 
-	print(items[int(item_id)])
-
 	delete_data(current_user, 'items_list', items, item_id)
-
-	print(items[int(item_id)])
 
 	return redirect(url_for('sell'))
