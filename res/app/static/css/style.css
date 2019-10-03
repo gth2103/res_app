@@ -365,7 +365,7 @@ h5 {
 
 @media only screen and (max-width: 415.98px) {
     .home-brand-wrapper{
-        margin-left: 0px;
+        left: 40%;
     }
 }
 
