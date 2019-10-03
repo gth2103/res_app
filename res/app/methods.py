@@ -62,7 +62,7 @@ def add_to_list(item_list, item, index):
 	file_content_in = file_in.readlines()
 	file_in.close()
 	file_out = open("/home/grant/res_app/res/app/seed.txt", "w")
- 	file_content_out = "".join(file_content_in)
+	file_content_out = "".join(file_content_in)
  	file_out.write(file_content_out)
  	file_out.close()
 
