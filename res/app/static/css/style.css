@@ -284,24 +284,23 @@ h5 {
 }
 
 .buy_info {
-    min-height: 550px;
+    min-height: 850px;
     opacity: 0.8;
+    color: #f8f9fa;
+    text-shadow: 0px 0px 1px rgb(64, 64, 64, 0.8);
+    font-size: 32px;
 }
 
 #info_1 {
-    background-color: #33b5e5;
-    color: #f8f9fa;
-    text-shadow: 1px 1px 10px rgb(64, 64, 64, 0.8);
-    font-size: 42px;
-    top: 5%;
+    background-color: #0099CC;
 }
 
 #info_2 {
-    background-color: #ffbb33;
+    background-color: #FF8800;
 }
 
 #info_3 {
-    background-color: #ff4444;
+    background-color: #CC0000;
 }
 
 #home {
