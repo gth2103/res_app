@@ -1,3 +1,3 @@
-from  app.seed import items
+from seed import items
 
 items_index  =  0
