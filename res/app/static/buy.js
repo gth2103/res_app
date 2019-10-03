@@ -57,4 +57,10 @@ $(document).ready(function(){
     set_previous()
     categories_dropdown()
     cart()
+    add_icon('all', items);
+    add_icon('household', household_items);
+    add_icon('furniture', furniture_items);
+    add_icon('appliances', appliances_items);
+    add_icon('electronics', electronics_items);
+    add_icon('tools', tools_items);
 })
