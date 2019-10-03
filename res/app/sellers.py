@@ -1,4 +1,4 @@
-from seed import users
+from app.seed import users
 
 sellers = []
 
