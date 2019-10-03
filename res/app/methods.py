@@ -58,10 +58,10 @@ def get_index(list):
     return len(list)
 
 def add_to_list(item_list, item, index):
-	file = open("/home/grant/res_app/res/app/seed.txt", "r")
+	file = open("/home/grant/res_app/res/app/seed.py", "r")
 	file_list = file.readlines()
 	file.close()
-	file_list.print()
+	print(file_list)
 	if item not in item_list:
 		if int(index) < len(item_list):
 			item_list.pop(int(index))
