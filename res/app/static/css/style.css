@@ -285,6 +285,22 @@ h5 {
     font-size: small;
 }
 
+.buy_info {
+    min-height: 550px;
+}
+
+#info_1 {
+    background-color: #33b5e5;
+}
+
+#info_1 {
+    background-color: #ffbb33;
+}
+
+#info_1 {
+    background-color: #ff4444;
+}
+
 #home {
 
     background-image: url()
