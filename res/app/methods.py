@@ -58,7 +58,7 @@ def get_index(list):
     return len(list)
 
 def add_to_list(item_list, item, index):
-	file = open("seed.txt", "r")
+	file = open("/home/grant/res_app/res/app/seed.txt", "r")
 	file_list = file.readlines()
 	file.close()
 	file_list.print()
