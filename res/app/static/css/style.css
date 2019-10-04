@@ -343,7 +343,7 @@ h5 {
 .featured_list {
     overflow-x: scroll;
     white-space: nowrap;
-    height: 400px;
+    height: 325px;
     width: inherit;
 }
 
