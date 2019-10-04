@@ -7,6 +7,8 @@ from app.items import items, items_index
 from app.users import users, users_index
 from app.sellers import sellers_search_items, sellers, initiate_sellers
 
+users = read_data("users")
+
 current_user = users[1]
 
 write_data("current_user", current_user)
