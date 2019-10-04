@@ -1,5 +1,4 @@
 from flask import request
-from app.views import current_user
 from app.items import items
 from ast import literal_eval
 
