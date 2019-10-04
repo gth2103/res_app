@@ -45,7 +45,7 @@ def read_data(file_name):
 	return []
 
 def write_data(data_name, data_in):
-	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "a")
+	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
 	if(type(data_in) is dict):
 		file_content_out = json.dumps(data_in)
 		file_out.writelines(file_content_out)
