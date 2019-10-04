@@ -5,7 +5,7 @@ from app.methods import get_index, get_value, set_value, add_to_list, add_data, 
 from app.buyers import buyers, buyers_index, buyers_search_items
 from app.items import items, items_index
 from app.users import users, users_index
-from app.sellers import sellers_search_items
+from app.sellers import sellers_search_items, sellers
 
 items = read_data("items")
 
