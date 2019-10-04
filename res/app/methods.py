@@ -40,7 +40,6 @@ def read_data(file_name):
 		file_content_in = file_in.readlines()
 		file_content_string = "".join(file_content_in)
 		file_content = literal_eval(file_content_string)
-		print(type(file_content))
 		file_in.close()
 		return file_content
 	return []
@@ -91,7 +90,6 @@ def get_items_by_category(item_list_in, category, item_list_out):
 			if(key == 'categories'):
 				if (category in value):
 					item_list_out.append(item)
-					print(item_list_out)
 
 def get_index(list):
     return len(list)
