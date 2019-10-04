@@ -20,7 +20,7 @@ var setUserOptions = function(){
     	div = '<br><button class="add_to_cart btn btn-outline-info m-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
     }
     $('#item-left-side').append(div);
-    send_message()
+    message()
 }
 
 var send_message = function(message){
