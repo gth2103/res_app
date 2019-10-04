@@ -27,30 +27,29 @@ def add_data(index):
 		"price": price
 	}
 
-	add_to_list(items, new_item_entry, index)
+	add_to_list("items", items, new_item_entry, index)
 
 	set_value(current_user, 'items_list', item_id)
 
-def read_data(list_name):
+def read_data(file_name):
 
 	list_name = str(list_name)
 	if(os.stat("/home/grant/res_app/res/data/" + list_name + ".txt").st_size > 0):
 		file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
 		file_content_in = file_in.readlines()
 		file_content_string = "".join(file_content_in)
-		file_content_list = literal_eval(file_content_string)
+		file_content = literal_eval(file_content_string)
 		file_in.close()
-		print(**file_content_list)
-		return file_content_list
+		return file_content
 	return []
 
-def write_data(list_in, list_name):
-	file_out = open("/home/grant/res_app/res/data/" + list_name + ".txt", "w")
-	file_content_out = "".join(list_in)
+def write_data(data_name, data_in):
+	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
+	file_content_out = "".join(data_in)
 	file_out.write(file_content_out)
 	file_out.close()
 
-def search(search_list_out, search_list_in):
+def search(list_name, search_list_out, search_list_in):
 
 	search_in = request.data.decode("utf-8")
 
@@ -58,26 +57,26 @@ def search(search_list_out, search_list_in):
 		for key, value in item.items():
 			if key ==  'title' or key == 'location' or key == 'details':
 				if search_in.lower() in value.lower() and item not in search_list_out:
-					add_to_list(search_list_out, item, len(search_list_out))
+					add_to_list(list_name, search_list_out, item, len(search_list_out))
 
-def get_items_by_id(item_list_in, item_id_list, item_list_out):
+def get_items_by_id(list_name, item_list_in, item_id_list, item_list_out):
 	for item in item_list_in:
 		for key, value in item.items():
 			if(key == 'item_id'):
 				if (value in item_id_list):
-					add_to_list(item_list_out, item, len(item_list_out))
+					add_to_list(list_name, item_list_out, item, len(item_list_out))
 
 def get_items_by_category(item_list_in, category, item_list_out):
 	for item in item_list_in:
 		for key, value in item.items():
 			if(key == 'categories'):
 				if (category in value):
-					add_to_list(item_list_out, item, len(item_list_out))
+					add_to_list("items", item_list_out, item, len(item_list_out))
 
 def get_index(list):
     return len(list)
 
-def add_to_list(item_list, item, index):
+def add_to_list(list_name, item_list, item, index):
 	if item not in item_list:
 		if int(index) < len(item_list):
 			item_list.pop(int(index))

@@ -15,6 +15,8 @@ buyers = read_data("buyers")
 
 current_user = users[1]
 
+write_data(current_user, "current_user")
+
 @app.route('/', methods=['GET', 'POST'])
 def home():
 	return render_template('home.html')
@@ -31,11 +33,11 @@ def sell():
 
 	seller_items = []
 
-	get_items_by_id(items, seller_item_ids, seller_items)
+	get_items_by_id("items", items, seller_item_ids, seller_items)
 
 	if request.method == 'POST':
 
-		search(sellers_search_items, items)
+		search("sellers_search_items", sellers_search_items, items)
 
 		return jsonify(sellers_search_items = sellers_search_items)
 	else:
@@ -94,7 +96,7 @@ def all():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, items)
+		search("buyers_search_items", buyers_search_items, items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -123,7 +125,7 @@ def household():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, household_items)
+		search("buyers_search_items", buyers_search_items, household_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -152,7 +154,7 @@ def furniture():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, furniture_items)
+		search("buyers_search_items", buyers_search_items, furniture_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -182,7 +184,7 @@ def electronics():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, electronics_items)
+		search("buyers_search_items", buyers_search_items, electronics_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -212,7 +214,7 @@ def appliances():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, appliances_items)
+		search("buyers_search_items", buyers_search_items, appliances_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
@@ -242,7 +244,7 @@ def tools():
 
 		buyers_search_items = []
 
-		search(buyers_search_items, tools_items)
+		search("buyers_search_items", buyers_search_items, tools_items)
 
 		return jsonify(buyers_search_items = buyers_search_items)
 	else:
