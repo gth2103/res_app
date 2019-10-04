@@ -34,7 +34,7 @@ var send_message = function(message){
         success: function(result){
             console.log(result);
             $('.close_modal').click()
-            added_flash()
+            sent_flash()
         },
         error: function(request, status, error){
             error_flash()
