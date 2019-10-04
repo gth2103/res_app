@@ -51,6 +51,7 @@ def write_data(data_name, data_in):
 		file_content_out = json.dumps(data_in)
 		file_out.writelines(file_content_out)
 	elif(type(data_in) is list):
+		data_in = list(dict.fromkeys(data_in))
 		file_content_out = "["
 		file_content = ",\n".join(str(value) for value in data_in)
 		file_content_out = file_content_out + file_content + "]"
