@@ -87,8 +87,8 @@ def get_index(list):
     return len(list)
 
 def add_to_list(list_name, item_list, item, index):
-	print(item_list)
 	if item not in item_list:
+		print(item_list)
 		if int(index) < len(item_list):
 			item_list.pop(int(index))
 		item_list.insert(int(index), item)
