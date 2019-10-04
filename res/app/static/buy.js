@@ -64,6 +64,39 @@ var add_icon = function(category, list){
     $('#' + category).prepend(div)
 }
 
+
+var scroll_on_hover = function(){
+
+    $('#scroll_left').on('hover', function(){
+        scroll_left()
+    }, stop())
+
+    $('#scroll_right').on('hover', function(){
+        scroll_right()
+    }, stop())
+
+
+
+}
+
+var scroll_left = function(){
+
+    $('.featured_list').stop().animate({
+            scrollLeft: '+=40'
+        }, 'fast', 'linear', scroll_left);
+}
+
+var scroll_right = function(){
+
+    $('.featured_list').stop().animate({
+            scrollLeft: '-=40'
+        }, 'fast', 'linear', scroll_right);
+}
+
+function stop(){
+    $('.featured_list').stop();
+}
+
 $(document).ready(function(){
     do_slide_show()
     set_previous()
@@ -75,4 +108,5 @@ $(document).ready(function(){
     add_icon('appliances', appliances_items);
     add_icon('electronics', electronics_items);
     add_icon('tools', tools_items);
+    scroll_on_hover()
 })
