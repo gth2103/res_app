@@ -56,7 +56,7 @@ var message = function(){
 
         e.preventDefault()
 
-        var message_text = $.trim($('textarea#contact_seller_message').val()).replace(/\"/g, "\\\"")
+        var message_text = $.trim($('textarea#contact_seller_message').val()).replace(/\"/g, "\\\"").replace(/\n/g, "\\n")
         var user_id = current_user.user_id
         var seller = item.user_id
 

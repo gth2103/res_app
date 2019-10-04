@@ -203,7 +203,7 @@ var add_to_cart = function(){
 		items.forEach(function(item){
 			if(item.item_id == item_id){
 				user_id = item.user_id
-				title = $.trim(item.title).replace(/\"/g, "\\\"")
+				title = $.trim(item.title).replace(/\"/g, "\\\"").replace(/\n/g, "\\n")
 			}
 
 		})

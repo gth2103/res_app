@@ -33,11 +33,11 @@ var submit = function(){
         e.preventDefault()
 
         var item_id = $('input#item-id').val()
-        var title = $('input#title').val()
+        var title = $('input#title').val().replace(/\"/g, "\\\"").replace(/\n/g, "\\n")
         var location = $('input#location').val()
         var image = $('input#img').val()
         var categories = $('input#categories').val()
-        var details = $.trim($('textarea#textareaDetails').val()).replace(/\"/g, "\\\"")
+        var details = $.trim($('textarea#textareaDetails').val()).replace(/\"/g, "\\\"").replace(/\n/g, "\\n")
         var price = $('input#price').val()
 
         console.log(details)
