@@ -52,8 +52,6 @@ def cart():
 	items = read_data("items")
 	current_user = read_data("current_user")
 
-	print(current_user)
-
 	cart_items = get_value(current_user, 'buyer')
 
 	return render_template('cart.html', cart_items = cart_items, items = items)

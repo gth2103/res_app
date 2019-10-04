@@ -32,6 +32,7 @@ def add_data(index):
 	set_value(current_user, 'items_list', item_id)
 
 def read_data(file_name):
+	print(file_name)
 	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
 		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
 		file_content_in = file_in.readlines()
@@ -47,6 +48,7 @@ def write_data(data_name, data_in):
 		file_content_out = json.dumps(data_in)
 		file_out.writelines(file_content_out)
 		read_data(data_name)
+		file_out.close()
 	elif(type(data_in) is list):
 		data_in = list(dict.fromkeys(str(key) for key in data_in))
 		file_content_out = "["
@@ -54,7 +56,7 @@ def write_data(data_name, data_in):
 		file_content_out = file_content_out + file_content + "]"
 		file_out.writelines(file_content_out)
 		read_data(data_name)
-	file_out.close()
+		file_out.close()
 
 def search(list_name, search_list_out, search_list_in):
 
