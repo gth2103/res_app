@@ -336,6 +336,10 @@ def add_to_cart():
 @app.route('/send_message', methods=['GET', 'POST'])
 def send_message():
 
+	global current_user
+
+	current_user = read_data("current_user")
+
 	json_data = request.get_json()
 	message_text = json_data["message_text"]
 	user_id = json_data["user_id"]
