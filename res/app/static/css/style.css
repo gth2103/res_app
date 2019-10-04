@@ -308,6 +308,8 @@ h5 {
     height: 300px;
     color: #17a2b8;
     background-color: #8ecdd7;
+    box-shadow: 0px -1px 1px #e5e5e5;
+    border-color: #d5d5d5 !important;
 }
 
 .base_item {
