@@ -45,16 +45,24 @@ def read_data(file_name):
 	return []
 
 def write_data(data_name, data_in):
+	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "a")
 	if(type(data_in) is dict):
-		file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
 		file_content_out = json.dumps(data_in)
 		file_out.write(file_content_out)
-		file_out.close()
 	elif(type(data_in) is list):
-		file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "a")
 		file_content_out = "".join(str(value) for value in data_in)
+		file_out.append(file_content_out)
+	file_out.close()
+
+def over_write_data(data_name, data_in):
+	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
+	if(type(data_in) is dict):
+		file_content_out = json.dumps(data_in)
 		file_out.write(file_content_out)
-		file_out.close()
+	elif(type(data_in) is list):
+		file_content_out = "".join(str(value) for value in data_in)
+		file_out.append(file_content_out)
+	file_out.close()
 
 def search(list_name, search_list_out, search_list_in):
 

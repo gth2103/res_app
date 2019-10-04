@@ -1,7 +1,7 @@
 import logging
 from flask import render_template, Response, request, jsonify, redirect, url_for
 from app import app
-from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id, get_items_by_category, read_data, write_data
+from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id, get_items_by_category, read_data, write_data, over_write_data
 from app.buyers import buyers, buyers_index, buyers_search_items
 from app.items import items, items_index
 from app.users import users, users_index
@@ -13,7 +13,7 @@ users = read_data("users")
 
 current_user = users[1]
 
-write_data("current_user", current_user)
+over_write_data("current_user", current_user)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
@@ -292,7 +292,7 @@ def add_to_cart():
 
 	set_value(current_user, 'buyer', item_id)
 
-	write_data("current_user", current_user)
+	over_write_data("current_user", current_user)
 
 	read_data("current_user")
 
