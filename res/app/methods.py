@@ -31,7 +31,8 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
-def read_data_in(list_name):
+def read_data(list_name):
+	
 	list_name = str(list_name)
 	file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
 	file_content_in = file_in.readlines()
@@ -40,7 +41,7 @@ def read_data_in(list_name):
 	file_in.close()
 	return file_content_list
 
-def write_data_out(list_in, list_name):
+def write_data(list_in, list_name):
 	file_out = open("/home/grant/res_app/res/data/" + list_name + ".txt", "w")
 	file_content_out = "".join(list_in)
 	file_out.write(file_content_out)

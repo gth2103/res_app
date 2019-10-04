@@ -1,6 +1,6 @@
-from app.methods import add_data
+from app.methods import read_data
 
-users = read_data_in(users)
+users = read_data(users)
 
 users_index = 0
 
