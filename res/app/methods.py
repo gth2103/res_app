@@ -97,7 +97,7 @@ def get_value(json_object, key_string):
 def set_value(json_object, key_string, new_value):
 	for key, value in json_object.items():
 		if key == key_string:
-			add_to_list(value, new_value, len(value))
+			value.append(new_value)
 
 def delete_data(json_object, key_string, item_list, id_to_remove):
 

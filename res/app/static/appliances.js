@@ -130,7 +130,7 @@ var add_item_to_cart = function(new_item){
     });
 }
 
-var added_flash = function(item){
+var added_flash = function(){
 
     $('#added_flash').removeClass('alert_show')
     $('#added_flash').addClass('alert_show')
@@ -142,7 +142,7 @@ var added_flash = function(item){
     }, 3500)
 }
 
-var error_flash = function(item){
+var error_flash = function(){
 
     $('#error_flash').removeClass('alert_show')
     $('#error_flash').addClass('alert_show')
