@@ -1,9 +1,9 @@
 from app.users import users
-from app.methods import read_data
+from app.methods import read_data_in
 
-sellers = read_data(sellers)
+sellers = read_data_in(sellers)
 
-sellers_search_items = read_data(sellers_search_items)
+sellers_search_items = read_data_in(sellers_search_items)
 
 sellers_index = 0
 
