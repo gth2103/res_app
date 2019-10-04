@@ -13,6 +13,8 @@ users = read_data("users")
 
 current_user = users[1]
 
+write_data("sellers", sellers)
+
 over_write_data("current_user", current_user)
 
 @app.route('/', methods=['GET', 'POST'])
