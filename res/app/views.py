@@ -9,9 +9,9 @@ from app.sellers import sellers_search_items, sellers, initiate_sellers
 
 current_user = users[1]
 
-initiate_sellers(users)
-
 write_data("current_user", current_user)
+
+initiate_sellers(users)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
