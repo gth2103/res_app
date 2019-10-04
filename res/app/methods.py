@@ -36,7 +36,7 @@ def read_data(list_name):
 	file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
 	file_content_in = file_in.readlines()
 	file_content_string = "".join(file_content_in)
-	file_content_list = literal_eval(file_content_out)
+	file_content_list = literal_eval(file_content_string)
 	file_in.close()
 	return file_content_list
 
