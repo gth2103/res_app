@@ -77,6 +77,7 @@ def get_items_by_category(item_list_in, category, item_list_out):
 			if(key == 'categories'):
 				if (category in value):
 					item_list_out.append(item)
+					print(item_list_out)
 
 def get_index(list):
     return len(list)
