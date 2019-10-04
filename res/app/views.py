@@ -351,7 +351,7 @@ def remove_from_cart(item_id):
 
 	if request.method == 'POST':
 
-		delete_data(current_user, 'buyer', buyers, item_id)
+		delete_data(current_user, 'buyer', "buyers", buyers, item_id)
 
 		return redirect(url_for('cart'))
 	return render_template('cart.html')
@@ -361,6 +361,6 @@ def delete(item_id):
 	global current_user
 	global items
 
-	delete_data(current_user, 'items_list', items, item_id)
+	delete_data(current_user, 'items_list', "items", items, item_id)
 
 	return redirect(url_for('sell'))
