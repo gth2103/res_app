@@ -115,6 +115,7 @@ def delete_data(json_object, key_string, item_name, item_list, id_to_remove):
 			for item_id in value:
 				if (str(item_id)  == id_to_remove):
 					value.remove(item_id)
+					write_data("current_user", json_object)
 
 	for item in item_list:
 		for key, value in item.items():
