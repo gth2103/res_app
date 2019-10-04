@@ -337,7 +337,14 @@ h5 {
 }
 
 .featured {
-    font-size: 24px;
+    font-size: 24px;  
+}
+
+.featured_list {
+    overflow-x: scroll;
+    white-space: nowrap;
+    height: 400px;
+    width: inherit;
 }
 
 #info_1_left {
