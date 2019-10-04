@@ -285,6 +285,7 @@ def add_to_cart():
 	    "title": title,
 	    "buyer": buyer,
 	}
+	
 	add_to_list("buyers", buyers, new_buyer_entry, len(buyers))
 
 	set_value(current_user, 'buyer', item_id)
