@@ -37,7 +37,6 @@ def read_data(file_name):
 		file_content_in = file_in.readlines()
 		file_content_string = "".join(file_content_in)
 		file_content = literal_eval(file_content_string)
-		print(type(file_content))
 		file_in.close()
 		return file_content
 	return []
