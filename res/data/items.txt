@@ -44,7 +44,7 @@
         "item_id": 4,
         "title": "Garren Club Chair",
         "location": "NY, New York 10027",
-        "image": "https://secure.img1-fg.wfcdn.com/im/42285234/resize-h800%5Ecompr-r85/4173/41736857/Garren+Club+Chair.jpg",
+        "image": "https://i.ibb.co/K7jhmwb/IMG-2292.jpg",
         "categories": ["household", "furniture"],
         "details": "Showcasing simplified design and a clean-cut silhouette, this charismatic armchair is a mid-century modern style statement piece perfect for your living room or study. Made with a kiln-dried solid hardwood frame, this dapper design sports plush polyester blend upholstery with high-density foam fill and pocket coil suspension, sleek track arms, two bolster pillow cushions, and round, tapered, rubber wood legs.",
         "price": "94.99" 
