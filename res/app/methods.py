@@ -40,11 +40,10 @@ def read_data(file_name):
 		file_content_in = file_in.readlines()
 		file_content_string = "".join(file_content_in)
 		file_content = literal_eval(file_content_string)
-		if(type(file_content) is list):
-			file_content = list(dict.fromkeys(str(key) for key in file_content))
+		print(type(file_content))
 		file_in.close()
 		return file_content
-	return ""
+	return []
 
 def write_data(data_name, data_in):
 	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
