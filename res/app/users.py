@@ -1,4 +1,4 @@
-from app.methods import read_data_in
+from app.methods import add_data
 
 users = read_data_in(users)
 

@@ -1,5 +1,5 @@
 from app.users import users
-from app.methods import read_data_in
+from app.methods import add_data
 
 sellers = read_data_in(sellers)
 
