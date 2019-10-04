@@ -8,9 +8,10 @@ var get_cart_items = function(){
     	$('#cart').append(div)
 	}
 	else {
-		cart_items.forEach(function(item_id){
 
-            current_cart = []
+        current_cart = []
+        
+		cart_items.forEach(function(item_id){
 
 			var div = ""
 
