@@ -347,6 +347,11 @@ h5 {
     width: inherit;
 }
 
+.scroll_arrows {
+    z-index: 100px;
+    height: 75px;
+}
+
 #info_1_left {
     background-color: #f8f9fa;
 }
