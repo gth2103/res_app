@@ -210,6 +210,15 @@ h5 {
     border-radius: 0px;
 }
 
+.close.btn {
+    border-radius: 0px;
+}
+
+.send.btn {
+    border-radius: 0px;
+}
+
+
 .item {
     min-width: 280px !important;
     max-width: 280px !important;
