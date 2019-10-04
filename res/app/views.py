@@ -13,7 +13,7 @@ users = read_data("users")
 
 current_user = users[1]
 
-initiate_sellers()
+initiate_sellers(users)
 
 print(sellers)
 
