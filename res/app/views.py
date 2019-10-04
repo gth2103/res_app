@@ -15,7 +15,7 @@ buyers = read_data("buyers")
 
 current_user = users[1]
 
-write_data(current_user, "current_user")
+write_data("current_user", current_user)
 
 @app.route('/', methods=['GET', 'POST'])
 def home():
