@@ -313,6 +313,11 @@ h5 {
     height: 400px;
 }
 
+.featured_img{
+    height: 350px;
+    width: 350px;
+}
+
 .base_buyer {
     height: 175px;
     color: #17a2b8;
@@ -329,6 +334,10 @@ h5 {
     height: 175px;
     box-shadow: 0px -1px 1px #e5e5e5;
     border-color: #d5d5d5 !important;
+}
+
+.featured {
+    font-size: 24px;
 }
 
 #info_1_left {
