@@ -44,13 +44,12 @@ def read_data(file_name):
 
 def write_data(data_name, data_in):
 	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
-	print(type(data_in))
-	file_content_out = ""
 	if(type(data_name) is dict):
 		file_content_out = json.dumps(data_in)
+		file_out.write(file_content_out)
 	elif(type(data_name) is list):
 		file_content_out = "".join(data_in)
-	file_out.write(file_content_out)
+		file_out.write(file_content_out)
 	file_out.close()
 
 def search(list_name, search_list_out, search_list_in):
