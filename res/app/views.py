@@ -11,8 +11,6 @@ items = read_data("items")
 
 users = read_data("users")
 
-buyers = read_data("buyers")
-
 current_user = users[1]
 
 write_data("current_user", current_user)
@@ -285,7 +283,7 @@ def add_to_cart():
 	    "title": title,
 	    "buyer": buyer,
 	}
-	
+
 	add_to_list("buyers", buyers, new_buyer_entry, len(buyers))
 
 	set_value(current_user, 'buyer', item_id)
