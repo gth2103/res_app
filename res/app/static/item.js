@@ -22,8 +22,61 @@ var setUserOptions = function(){
     $('#item-left-side').append(div);
 }
 
+var send_message = function(message){
+    var message_to_send = message
+    $.ajax({
+        type: "POST",
+        url: "/send_message",                
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(message_to_send),
+        success: function(result){
+            console.log(result);
+            $('.close_modal').click()
+            added_flash()
+        },
+        error: function(request, status, error){
+            error_flash()
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
 
+var message = function(){
 
+    var form = $('#add_item_form')
+
+    form.validate()
+
+    $('.send').on('click', function(e){
+
+        e.preventDefault()
+
+        var message_text = $.trim($('textarea#contact_seller_message').val()).replace(/\"/g, "\\\"")
+        var user_id = current_user.user_id
+        var seller = item.user_id
+
+        var new_message = jQuery.parseJSON( '{ "message_text": "' + message_text + '", "user_id": "' + user_id + '", "seller": "' + seller + '" }')
+
+        send_message(new_message)
+    })
+
+}
+
+var sent_flash = function(){
+
+    $('#sent_flash').removeClass('alert_show')
+    $('#sent_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#sent_flash').removeClass('alert_show')
+        $('#sent_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
 
 var add_to_cart = function(){
 

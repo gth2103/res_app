@@ -329,11 +329,32 @@ def add_to_cart():
 
 	set_value(current_user, 'buyer', item_id)
 
-	write_data("current_user", current_user)
-
 	current_user = read_data("current_user")
 
 	return jsonify(buyers = buyers)
+
+@app.route('/send_message', methods=['GET', 'POST'])
+def send_message():
+
+	json_data = request.get_json()
+	message_text = json_data["message_text"]
+	user_id = json_data["user_id"]
+	seller = json_data["seller"]
+
+	messages = get_value(current_user, 'messages')
+	current_user = read_data("current_user")
+
+	new_message = {
+	    "message_text": message_text,
+	    "user_id": user_id,
+	    "seller": seller
+	}
+
+	set_value(current_user, 'messages', new_message)
+
+	current_user = read_data("current_user")
+
+	return jsonify(current_user = current_user)
 
 @app.route('/view_item/<item_id>', methods=['GET', 'POST'])
 def view_item(item_id):

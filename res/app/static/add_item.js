@@ -47,7 +47,7 @@ var submit = function(){
         e.preventDefault()
 
         var item_id = $('input#item-id').val()
-        var title = $('input#title').val()
+        var title = $.trim($('input#title').val()).replace(/\"/g, "\\\"")
         var location = $('input#location').val()
         var image = $('input#img').val()
         var categories = $('input#categories').val()
