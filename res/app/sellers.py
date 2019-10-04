@@ -1,3 +1,5 @@
+from app.methods import add_to_list
+
 sellers = []
 
 sellers_search_items = []
