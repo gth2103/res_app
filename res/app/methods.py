@@ -40,6 +40,7 @@ def read_data(list_name):
 		file_content_string = "".join(file_content_in)
 		file_content_list = literal_eval(file_content_string)
 		file_in.close()
+		print(**file_content_list)
 		return file_content_list
 	return []
 
