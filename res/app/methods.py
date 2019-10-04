@@ -69,7 +69,7 @@ def get_items_by_id(list_name, item_list_in, item_id_list, item_list_out):
 		for key, value in item.items():
 			if(key == 'item_id'):
 				if (value in item_id_list):
-					add_to_list(list_name, item_list_out, item, len(item_list_out))
+					item_list_out.appent(item)
 
 def get_items_by_category(item_list_in, category, item_list_out):
 	for item in item_list_in:
