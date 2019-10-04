@@ -350,6 +350,21 @@ h5 {
 .scroll_arrows {
     z-index: 100px;
     height: 75px;
+    opacity: 0.5;
+}
+
+.scroll_arrows:hover {
+    opacity: 1;
+}
+
+#scroll_left{
+    top: 30%;
+    left: -40px;
+}
+
+#scroll_right{
+    top: 30%;
+    right: 3px;
 }
 
 #info_1_left {
