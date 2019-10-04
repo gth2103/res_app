@@ -11,6 +11,8 @@ items = read_data("items")
 
 users = read_data("users")
 
+buyers = read_data("buyers")
+
 current_user = users[1]
 
 @app.route('/', methods=['GET', 'POST'])
