@@ -11,10 +11,6 @@ items = read_data("items")
 
 users = read_data("users")
 
-print(items)
-
-print(users)
-
 current_user = users[1]
 
 initiate_sellers()
