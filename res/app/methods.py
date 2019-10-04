@@ -44,7 +44,7 @@ def read_data(file_name):
 
 def write_data(data_name, data_in):
 	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
-	print(type(data_name) is dict)
+	print(type(data_name))
 	if(type(data_name) is dict):
 		file_content_out = json.dumps(data_in)
 		print(file_content_out)
