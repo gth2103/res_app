@@ -31,8 +31,6 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
-	write_data("current_user", current_user)
-
 def read_data(file_name):
 	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
 		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
@@ -94,6 +92,7 @@ def add_to_list(list_name, item_list, item, index):
 		write_data(list_name, item_list)
 
 def get_value(json_object, key_string):
+	read_data("current_user")
 	for key, value in json_object.items():
 		if key == key_string:
 			return value
@@ -103,6 +102,7 @@ def set_value(json_object, key_string, new_value):
 		if key == key_string:
 			if new_value not in value:
 				value.append(new_value)
+				write_data("current_user", json_object)
 
 def delete_data(json_object, key_string, item_name, item_list, id_to_remove):
 
