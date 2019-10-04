@@ -17,7 +17,7 @@ var setUserOptions = function(){
     }
     else {
 
-    	div = '<br><button class="add_to_cart btn btn-outline-info m-5" type="submit">Add to Cart</button><button type="button class="contact btn btn-outline-secondary border-0 m-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
+    	div = '<br><button class="add_to_cart btn btn-outline-info m-5" type="submit">Add to Cart</button><button type="submit class="contact btn btn-outline-secondary border-0 m-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
     }
     $('#item-left-side').append(div);
 }
