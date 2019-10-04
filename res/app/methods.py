@@ -50,7 +50,7 @@ def write_data(data_name, data_in):
 		file_content_out = json.dumps(data_in)
 		file_out.writelines(file_content_out)
 	elif(type(data_in) is list):
-		file_content_out = "".join(str(value) for value in data_in)
+		file_content_out = "\n".join(str(value) for value in data_in)
 		file_out.writelines(file_content_out)
 	file_out.close()
 
