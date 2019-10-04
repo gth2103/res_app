@@ -7,10 +7,6 @@ from app.items import items, items_index
 from app.users import users, users_index
 from app.sellers import sellers_search_items, sellers, initiate_sellers
 
-items = read_data("items")
-
-users = read_data("users")
-
 current_user = users[1]
 
 initiate_sellers(users)
@@ -26,6 +22,9 @@ def sell():
 	global items
 	global current_user
 	global sellers_search_items
+
+	items = read_data("items")
+	current_user = read_data("current_user")
 
 	sellers_search_items = []
 
@@ -48,6 +47,7 @@ def cart():
 	global current_user
 	global items
 
+	items = read_data("items")
 	current_user = read_data("current_user")
 
 	print(current_user)
@@ -62,6 +62,10 @@ def buy():
 	global current_user
 	global users
 	global buyers_search_items
+
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
 
 	household_items = []
 	furniture_items = []
@@ -83,6 +87,10 @@ def all():
 	global current_user
 	global users
 	global buyers_search_items
+
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
 
 	household_items = []
 	furniture_items = []
@@ -113,6 +121,10 @@ def household():
 	global users
 	global buyers_search_items
 
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
+
 	household_items = []
 	furniture_items = []
 	electronics_items = []
@@ -141,6 +153,10 @@ def furniture():
 	global current_user
 	global users
 	global buyers_search_items
+
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
 
 	household_items = []
 	furniture_items = []
@@ -172,6 +188,10 @@ def electronics():
 	global users
 	global buyers_search_items
 
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
+
 	household_items = []
 	furniture_items = []
 	electronics_items = []
@@ -201,6 +221,10 @@ def appliances():
 	global current_user
 	global users
 	global buyers_search_items
+
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
 
 	household_items = []
 	furniture_items = []
@@ -232,6 +256,10 @@ def tools():
 	global users
 	global buyers_search_items
 
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
+
 	household_items = []
 	furniture_items = []
 	electronics_items = []
@@ -261,6 +289,9 @@ def add_item():
 	global current_user
 	global items
 
+	items = read_data("items")
+	current_user = read_data("current_user")
+
 	items_index = get_index(items)
 
 	if request.method == 'POST':
@@ -282,6 +313,7 @@ def add_to_cart():
 	title = json_data["title"]
 
 	buyer = get_value(current_user, 'user')
+	current_user = read_data("current_user")
 
 	new_buyer_entry = {
 	    "item_id": item_id,
@@ -316,6 +348,10 @@ def item(item_id):
 	global items
 	global users
 
+	items = read_data("items")
+	users = read_data("users")
+	current_user = read_data("current_user")
+
 	item_id = item_id
 
 	index = int(item_id)
@@ -349,6 +385,8 @@ def remove_from_cart(item_id):
 	global current_user
 	global buyers
 
+	current_user = read_data("current_user")
+
 	if request.method == 'POST':
 
 		delete_data(current_user, 'buyer', "buyers", buyers, item_id)
@@ -360,6 +398,9 @@ def remove_from_cart(item_id):
 def delete(item_id):
 	global current_user
 	global items
+
+	items = read_data("items")
+	current_user = read_data("current_user")
 
 	delete_data(current_user, 'items_list', "items", items, item_id)
 
