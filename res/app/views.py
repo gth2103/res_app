@@ -7,15 +7,7 @@ from app.items import items, items_index
 from app.users import users, users_index
 from app.sellers import sellers_search_items
 
-buyers = read_data("buyers")
-
-buyers_search_items = read_data("buyers_search_items")
-
 items = read_data("items")
-
-sellers = read_data("sellers")
-
-sellers_search_items = read_data("sellers_search_items")
 
 users = read_data("users")
 
