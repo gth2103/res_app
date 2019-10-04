@@ -31,6 +31,21 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
+def read_data(list_name):
+	list_name = str(list_name)
+	file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
+	file_content_in = file_in.readlines()
+	file_content_string = "".join(file_content_in)
+	file_content_list = literal_eval(file_content_out)
+	file_in.close()
+	return file_content_list
+
+def write_data(list_in, list_name):
+	file_out = open("/home/grant/res_app/res/data/" + list_name + ".txt", "w")
+	file_content_out = "".join(list_in)
+	file_out.write(file_content_out)
+	file_out.close()
+
 def search(search_list_out, search_list_in):
 
 	search_in = request.data.decode("utf-8")

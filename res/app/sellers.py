@@ -1,8 +1,8 @@
-from seed import users
+from app.users import users
 
-sellers = []
+sellers = read_data(sellers)
 
-sellers_search_items = []
+sellers_search_items = read_data(sellers_search_items)
 
 sellers_index = 0
 

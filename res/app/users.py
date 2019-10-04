@@ -1,4 +1,4 @@
-from seed import users
+users = read_data(users)
 
 users_index = 0
 
