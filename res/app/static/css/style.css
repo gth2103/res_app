@@ -304,6 +304,16 @@ h5 {
     height: 400px;
 }
 
+.base_buyer {
+    height: 400px;
+    background-color: #17a2b8;
+}
+
+.base_seller {
+    height: 400px;
+    background-color: #f8f9fa;
+}
+
 #info_1_left {
     background-color: #f8f9fa;
 }
