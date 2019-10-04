@@ -19,7 +19,7 @@ var get_cart_items = function(){
 
                 if(item != null && item.item_id != null){
 
-                    if(item.item_id == item_id && $.inArray(item.item_id, current_cart) != -1) {
+                    if(item.item_id == item_id && $.inArray(item.item_id, current_cart) == -1) {
 
                         console.log(current_cart)
 
