@@ -286,9 +286,17 @@ def add_to_cart():
 
 	add_to_list("buyers", buyers, new_buyer_entry, len(buyers))
 
+	read_data("buyers")
+
+	print(buyers)
+
 	set_value(current_user, 'buyer', item_id)
 
 	write_data("current_user", current_user)
+
+	read_data("current_user")
+
+	print(current_user)
 
 	return jsonify(buyers = buyers)
 
