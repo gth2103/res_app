@@ -300,6 +300,15 @@ h5 {
     font-size: 20px;
 }
 
+.sell_info {
+    margin-top: -100px;
+    height: 550px;
+    opacity: 0.8;
+    color: #f8f9fa;
+    text-shadow: 0px 0px 1px rgb(64, 64, 64, 0.8);
+    font-size: 20px;
+}
+
 .info_divider {
     height: 400px;
 }
@@ -317,8 +326,10 @@ h5 {
 }
 
 .base_seller {
-    height: 400px;
-    background-color: #f8f9fa;
+    height: 200px;
+    background-color: #6c757d;
+    box-shadow: 0px -1px 1px #e5e5e5;
+    border-color: #d5d5d5 !important;
 }
 
 #info_1_left {
@@ -356,10 +367,6 @@ h5 {
     background-image: url(../images/info_1.png);
     background-repeat: no-repeat;
     background-size: cover;
-}
-
-#info_4_right {
-    background-color: #6c757d;
 }
 
 #home {
