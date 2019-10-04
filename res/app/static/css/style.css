@@ -305,8 +305,10 @@ h5 {
 }
 
 .base_buyer {
-    height: 400px;
+    height: 300px;
+    color: #17a2b8;
     background-color: #17a2b8;
+    opacity: 0.5;
 }
 
 .base_seller {
