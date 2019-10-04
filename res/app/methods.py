@@ -41,7 +41,7 @@ def read_data(file_name):
 		file_content_string = "".join(file_content_in)
 		file_content = literal_eval(file_content_string)
 		if(type(file_content) is list):
-			file_content = list(dict.fromkeys(file_content))
+			file_content = list(dict.fromkeys(str(content) for key in file_content))
 		file_in.close()
 		return file_content
 	return ""
