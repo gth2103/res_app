@@ -31,6 +31,8 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
+	write_data("current_user", current_user)
+
 def read_data(file_name):
 
 	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
@@ -84,6 +86,7 @@ def add_to_list(list_name, item_list, item, index):
 		if int(index) < len(item_list):
 			item_list.pop(int(index))
 		item_list.insert(int(index), item)
+		write_data(list_name, item_list)
 
 def get_value(json_object, key_string):
 	for key, value in json_object.items():
