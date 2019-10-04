@@ -33,9 +33,8 @@ def add_data(index):
 
 def read_data(file_name):
 
-	list_name = str(list_name)
-	if(os.stat("/home/grant/res_app/res/data/" + list_name + ".txt").st_size > 0):
-		file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
+	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
+		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
 		file_content_in = file_in.readlines()
 		file_content_string = "".join(file_content_in)
 		file_content = literal_eval(file_content_string)
