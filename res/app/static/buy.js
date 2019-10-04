@@ -67,16 +67,21 @@ var add_icon = function(category, list){
 
 var scroll_on_hover = function(){
 
-    $('#scroll_left').hover(function(){
+    $('#scroll_left').on('mouseover', function(){
         scroll_left()
-    }, stop())
+    })
 
-    $('#scroll_right').hover(function(){
+    $('#scroll_left').on('mouseout', function(){
+        stop()
+    })
+
+    $('#scroll_right').on('mouseover' function(){
         scroll_right()
-    }, stop())
+    })
 
-
-
+    $('#scroll_right').on('mouseout' function(){
+        stop()
+    })
 }
 
 var scroll_left = function(){
