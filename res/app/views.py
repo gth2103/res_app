@@ -15,8 +15,6 @@ current_user = users[1]
 
 initiate_sellers(users)
 
-print(sellers)
-
 write_data("current_user", current_user)
 
 @app.route('/', methods=['GET', 'POST'])

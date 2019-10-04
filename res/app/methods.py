@@ -45,11 +45,13 @@ def read_data(file_name):
 	return []
 
 def write_data(data_name, data_in):
+	print(data_name)
 	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
 	if(type(data_in) is dict):
 		file_content_out = json.dumps(data_in)
 		file_out.writelines(file_content_out)
 	elif(type(data_in) is list):
+		print(data_in)
 		data_in = list(dict.fromkeys(str(key) for key in data_in))
 		file_content_out = "["
 		file_content = ",\n".join(str(value) for value in data_in)
@@ -85,6 +87,7 @@ def get_index(list):
     return len(list)
 
 def add_to_list(list_name, item_list, item, index):
+	print(items_list)
 	if item not in item_list:
 		if int(index) < len(item_list):
 			item_list.pop(int(index))
