@@ -286,7 +286,7 @@ def add_to_cart():
 
 	add_to_list("buyers", buyers, new_buyer_entry, len(buyers))
 
-	read_data("buyers")
+	buyers = read_data("buyers")
 
 	print(buyers)
 
@@ -294,7 +294,7 @@ def add_to_cart():
 
 	over_write_data("current_user", current_user)
 
-	read_data("current_user")
+	current_user = read_data("current_user")
 
 	print(current_user)
 
