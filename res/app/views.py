@@ -267,6 +267,7 @@ def add_item():
 def add_to_cart():
 	global buyers
 	global buyers_index
+	global current_user
 
 	json_data = request.get_json()
 	item_id = json_data["item_id"]
