@@ -67,11 +67,11 @@ var add_icon = function(category, list){
 
 var scroll_on_hover = function(){
 
-    $('#scroll_left').on('hover', function(){
+    $('#scroll_left').hover(function(){
         scroll_left()
     }, stop())
 
-    $('#scroll_right').on('hover', function(){
+    $('#scroll_right').hover(function(){
         scroll_right()
     }, stop())
 

@@ -348,7 +348,7 @@ h5 {
 }
 
 .scroll_arrows {
-    z-index: 100px;
+    z-index: 200;
     height: 75px;
     opacity: 0.5;
 }
