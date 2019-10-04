@@ -73,8 +73,8 @@ h5 {
 }
 
 .btn-secondary{
-    background-color: #b2b2b2;
-    border-color: #b2b2b2;
+    background-color: #b2b2b2 !important;
+    border-color: #b2b2b2 !important;
 }
 
 .navbar{
@@ -171,8 +171,8 @@ h5 {
 }
 
 .btn-secondary:hover {
-    background-color: #ffffff;
-    color: #6c757d;
+    background-color: #ffffff !important;
+    color: #6c757d !important;
 }
 
 .add_to_cart.btn-outline-info {
