@@ -1,3 +1,5 @@
+from app.methods import read_data
+
 buyers = read_data(buyers)
 
 buyers_search_items = read_data(buyers_search_items)
