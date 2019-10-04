@@ -12,4 +12,5 @@ def initiate_sellers():
     			if value:
     				for key, value in user.items():
     					if key == 'user_id':
+    						print(value)
     						add_to_list("sellers", sellers, value, len(sellers))
