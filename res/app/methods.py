@@ -1,5 +1,5 @@
 from flask import request
-from app.users import current_user
+from app.views import current_user
 from app.items import items
 from ast import literal_eval
 
@@ -32,7 +32,7 @@ def add_data(index):
 	set_value(current_user, 'items_list', item_id)
 
 def read_data(list_name):
-	
+
 	list_name = str(list_name)
 	file_in = open("/home/grant/res_app/res/data/" + list_name + ".txt", "r")
 	file_content_in = file_in.readlines()

@@ -1,11 +1,25 @@
 import logging
 from flask import render_template, Response, request, jsonify, redirect, url_for
 from app import app
-from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id, get_items_by_category
+from app.methods import get_index, get_value, set_value, add_to_list, add_data, delete_data, search, get_items_by_id, get_items_by_category, read_data, write_data
 from app.buyers import buyers, buyers_index, buyers_search_items
 from app.items import items, items_index
-from app.users import users, users_index, current_user
+from app.users import users, users_index
 from app.sellers import sellers_search_items
+
+buyers = read_data(buyers)
+
+buyers_search_items = read_data(buyers_search_items)
+
+items = read_data(items)
+
+sellers = read_data(sellers)
+
+sellers_search_items = read_data(sellers_search_items)
+
+users = read_data(users)
+
+current_user = users[1]
 
 @app.route('/', methods=['GET', 'POST'])
 def home():

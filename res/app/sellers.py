@@ -1,9 +1,8 @@
 from app.users import users
-from app.methods import read_data
 
-sellers = read_data(sellers)
+sellers = []
 
-sellers_search_items = read_data(sellers_search_items)
+sellers_search_items = []
 
 sellers_index = 0
 
