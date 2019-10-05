@@ -103,7 +103,6 @@ function stop(){
 }
 
 $(document).ready(function(){
-    do_slide_show()
     set_previous()
     categories_dropdown()
     cart()
