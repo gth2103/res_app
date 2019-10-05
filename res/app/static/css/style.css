@@ -506,6 +506,24 @@ ul {
     #clear {
         right: 15px;
     }
+    .buy_info.h2 {
+        font-size: 1.5rem !important;
+    }
+    .buy_info.h5 {
+        font-size: 1rem !important;
+    }
+    .buy_info.h4 {
+        font-size: 1.175rem !important;
+    }
+    .buy_info.pt-4 {
+        padding-top: .5rem !important;
+    }
+    .buy_info.p-4 {
+        padding: 0rem !important;
+    }
+    .buy_info {
+        padding-left: 1.5rem !important;
+    }
 }
 
 @media only screen and (max-width: 414.98px) {
