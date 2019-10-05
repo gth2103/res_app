@@ -506,19 +506,19 @@ ul {
     #clear {
         right: 15px;
     }
-    .h2 {
+    #info_3_left.h2 {
         font-size: 1.5rem !important;
     }
-    .h5 {
+    #info_3_left.h5 {
         font-size: 1rem !important;
     }
-    .h4 {
+    #info_3_left.h4 {
         font-size: 1.175rem !important;
     }
-    .pt-4 {
+    #info_3_left.pt-4 {
         padding-top: .5rem !important;
     }
-    .p-4 {
+    #info_3_left.p-4 {
         padding: 0rem !important;
     }
     .buy_info {
