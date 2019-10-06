@@ -383,6 +383,16 @@ ul {
     opacity: 1;
 }
 
+.header_1 {
+        font-size: 2rem !important;
+    }
+.header_3 {
+    font-size: 1.5rem !important;
+}
+.header_4 {
+    font-size: 1.25rem !important;
+}
+
 #scroll_left{
     top: 30%;
     left: -40px;
@@ -506,23 +516,14 @@ ul {
     #clear {
         right: 15px;
     }
-    #info_3_left.h2 {
+    .header_1 {
         font-size: 1.5rem !important;
     }
-    #info_3_left.h5 {
-        font-size: 1rem !important;
-    }
-    #info_3_left.h4 {
+    .header_3 {
         font-size: 1.175rem !important;
     }
-    #info_3_left.pt-4 {
-        padding-top: .5rem !important;
-    }
-    #info_3_left.p-4 {
-        padding: 0rem !important;
-    }
-    .buy_info {
-        padding-left: 1.5rem !important;
+    .header_4 {
+        font-size: 1rem !important;
     }
 }
 
