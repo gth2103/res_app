@@ -393,6 +393,11 @@ ul {
     font-size: 1.25rem !important;
 }
 
+.info_text {
+    top: 12%;
+    left: 1%;
+}
+
 #scroll_left{
     top: 30%;
     left: -40px;
@@ -426,8 +431,6 @@ ul {
 
 #info_3_left {
     background-color: #17a2b8;
-    top: 12%;
-    left: 1%;
 }
 
 #info_3_right {
