@@ -385,10 +385,16 @@ ul {
 
 .header_1 {
         font-size: 2rem !important;
-    }
+}
+
+.header_2 {
+        font-size: 1.75rem !important;
+}
+
 .header_3 {
     font-size: 1.5rem !important;
 }
+
 .header_4 {
     font-size: 1.25rem !important;
 }
@@ -523,6 +529,9 @@ ul {
     }
     .header_1 {
         font-size: 1.5rem !important;
+    }
+    .header_2 {
+        font-size: 1.25rem !important;
     }
     .header_3 {
         font-size: 1.175rem !important;
