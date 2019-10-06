@@ -156,8 +156,9 @@ ul {
 
 .item-img {
     max-height: 400px;
-    max-width: 400px;
+    max-width: 100%;
     border-radius: 10px;
+    height: auto !important;
 }
 
 .item-thumbnail {

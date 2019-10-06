@@ -13,11 +13,11 @@ var setUserOptions = function(){
     })
     var div  = ""
     if (is_current_user_item){
-    	div = '<br><button class="update btn btn-outline-warning m-5" type="submit">Update</button><button class="delete btn btn-outline-danger m-5" type="submit">Delete</button>'
+    	div = '<br><button class="update btn btn-outline-warning m-5" type="submit">Update</button><button class="delete btn btn-outline-danger m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Delete</button>'
     }
     else {
 
-    	div = '<br><button class="add_to_cart btn btn-outline-info m-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
+    	div = '<br><button class="add_to_cart btn btn-outline-info m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-2 m-sm-2 m-md-3 m-lg-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
     }
     $('#item-left-side').append(div);
     message()
