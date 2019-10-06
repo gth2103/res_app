@@ -551,6 +551,21 @@ ul {
     .home-brand-wrapper {
         margin-left: -150.5px;
     }
+    .title {
+    font-size: 16px;
+    font-weight: bold;
+    }
+
+    .location {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 18px;
+    }
+    .details {
+        font-size: 12;
+    }
 }
 
 @media only screen and (max-width: 414.98px) {
