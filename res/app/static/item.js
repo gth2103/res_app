@@ -13,7 +13,7 @@ var setUserOptions = function(){
     })
     var div  = ""
     if (is_current_user_item){
-    	div = '<br><button class="update btn btn-outline-warning m-5" type="submit">Update</button><button class="delete btn btn-outline-danger m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Delete</button>'
+    	div = '<br><button class="update btn btn-outline-warning m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Update</button><button class="delete btn btn-outline-danger m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Delete</button>'
     }
     else {
 
