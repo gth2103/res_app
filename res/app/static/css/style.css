@@ -527,6 +527,21 @@ ul {
     #clear {
         right: 30px;   
     }
+    .title {
+    font-size: 22px;
+    font-weight: bold;
+    }
+
+    .location {
+        font-size: 15px;
+    }
+
+    .price {
+        font-size: 20px;
+    }
+    .details {
+        font-size: 12;
+    }
 }
 
 @media only screen and (max-width: 575.98px) {
@@ -562,9 +577,6 @@ ul {
 
     .price {
         font-size: 18px;
-    }
-    .details {
-        font-size: 12;
     }
 }
 
