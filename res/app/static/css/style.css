@@ -402,6 +402,7 @@ ul {
 .info_text {
     top: 12%;
     left: 1%;
+    width: 93%;
 }
 
 #scroll_left{
