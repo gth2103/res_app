@@ -399,6 +399,10 @@ ul {
     font-size: 1.25rem !important;
 }
 
+.header_4 {
+    font-size: 1.15rem !important;
+}
+
 .info_text {
     top: 12%;
     left: 1%;
@@ -539,6 +543,9 @@ ul {
     }
     .header_4 {
         font-size: 1rem !important;
+    }
+    .header_5 {
+        font-size: 0.9rem !important;
     }
     .home-brand-wrapper {
         margin-left: -150.5px;
