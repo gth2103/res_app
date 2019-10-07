@@ -2,7 +2,8 @@ import os, json
 from flask import request
 from app.items import items
 from ast import literal_eval
-from app.views import current_user
+
+current_user = current_user[1]
 
 def read_data(file_name):
 	print(file_name)
@@ -14,6 +15,30 @@ def read_data(file_name):
 		file_in.close()
 		return file_content
 	return []
+
+def write_data(data_name, data_in):
+	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
+	if(type(data_in) is dict):
+		file_content_out = json.dumps(data_in)
+		file_out.writelines(file_content_out)
+		file_out.close()
+	elif(type(data_in) is list):
+		data_in = list(dict.fromkeys(str(key) for key in data_in))
+		file_content_out = "["
+		file_content = ",\n".join(str(value) for value in data_in)
+		file_content_out = file_content_out + file_content + "]"
+		file_out.writelines(file_content_out)
+		file_out.close()
+
+def search(list_name, search_list_out, search_list_in):
+
+	search_in = request.data.decode("utf-8")
+
+	for item in search_list_in:
+		for key, value in item.items():
+			if key ==  'title' or key == 'location' or key == 'details':
+				if search_in.lower() in value.lower() and item not in search_list_out:
+					add_to_list(list_name, search_list_out, item, len(search_list_out))
 
 def add_data(index):
 	global current_user
@@ -44,30 +69,6 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
-
-def write_data(data_name, data_in):
-	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
-	if(type(data_in) is dict):
-		file_content_out = json.dumps(data_in)
-		file_out.writelines(file_content_out)
-		file_out.close()
-	elif(type(data_in) is list):
-		data_in = list(dict.fromkeys(str(key) for key in data_in))
-		file_content_out = "["
-		file_content = ",\n".join(str(value) for value in data_in)
-		file_content_out = file_content_out + file_content + "]"
-		file_out.writelines(file_content_out)
-		file_out.close()
-
-def search(list_name, search_list_out, search_list_in):
-
-	search_in = request.data.decode("utf-8")
-
-	for item in search_list_in:
-		for key, value in item.items():
-			if key ==  'title' or key == 'location' or key == 'details':
-				if search_in.lower() in value.lower() and item not in search_list_out:
-					add_to_list(list_name, search_list_out, item, len(search_list_out))
 
 def get_items_by_id(list_name, item_list_in, item_id_list, item_list_out):
 	for item in item_list_in:
