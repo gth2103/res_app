@@ -20,7 +20,7 @@ var get_cart_items = function(){
 
                     if(item.item_id == item_id) {
 
-                        div = '<div class="position-relative"><li class="cart-item mt-2 mb-2 d-inline-block"><hr><img class="item-mini mb-2" src="' + item.image + '"><div class="cart_title ml-5 mt-4 d-inline-block">' + item.title + '</div><div class="ml-5 cart_price d-inline-block mt-4 align-top">$' + item.price + '</div><button id="' + item.item_id + '" class="remove cart_remove btn btn-outline-danger mt-4 mr-2 position-absolute" type="submit"> Remove </button><button id="' + item.item_id + '" class="view cart_view btn btn-outline-warning mt-4 mr-2 position-absolute" type="submit"> View </button><button id="' + item.item_id + '" class="contact cart_contact btn btn-outline-secondary mt-4 mr-2 position-absolute" data-toggle="modal" data-target="#contact_seller" type="submit"> Contact Seller</button></li></div>'
+                        div = '<div class="position-relative"><li class="cart-item mt-2 mb-2 d-inline-block"><hr><img class="item-mini mb-2" src="' + item.image + '"><div class="cart_title ml-5 mt-4 d-inline-block align-top">' + item.title + '</div><div class="ml-5 cart_price d-inline-block mt-4 align-top">$' + item.price + '</div><button id="' + item.item_id + '" class="remove cart_remove btn btn-outline-danger mt-4 mr-2 position-absolute" type="submit"> Remove </button><button id="' + item.item_id + '" class="view cart_view btn btn-outline-warning mt-4 mr-2 position-absolute" type="submit"> View </button><button id="' + item.item_id + '" class="contact cart_contact btn btn-outline-secondary mt-4 mr-2 position-absolute" data-toggle="modal" data-target="#contact_seller" type="submit"> Contact Seller</button></li></div>'
                     }
                 }
 			})
@@ -40,7 +40,7 @@ var get_id = function(){
         var id = $(this).attr('id')
 
         items.forEach(function(element){
-            if(element.id == id){
+            if(element.item_id == id){
                 item = element;
             }
         })
