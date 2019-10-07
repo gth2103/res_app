@@ -55,6 +55,31 @@
         </div>
     </div>
 </div>
+<!-- Modal -->
+<div class="modal fade" id="contact_seller" tabindex="-1" role="dialog" aria-labelledby="contact_seller_label" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h6 class="modal-title text-dark" id="contact_seller_label">Enter your message below...</h6>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body pb-0">
+        <form id="add_item_form">
+                <div class="form-group">
+                    <textarea class="form-control" id="contact_seller_message" rows="3" required></textarea>
+                    <small id="contact_seller_message_help" class="m-1 form-text text-muted">Some suggestions: Is the item still available? Contact me at janedoe@example.com to discuss. Is the price negotiable?</small>
+                </div>
+            </form>
+      </div>
+      <div class="modal-footer p-1">
+        <button type="button" class="close_modal btn btn-secondary m-2 py-0" data-dismiss="modal">Close</button>
+        <button type="button" class="send btn btn-info m-2 py-0">Send</button>
+      </div>
+    </div>
+  </div>
+</div>
 {% endblock %}
 {% block javascript %}
 

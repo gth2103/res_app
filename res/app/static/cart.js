@@ -18,15 +18,14 @@ var get_cart_items = function(){
 
                     if(item.item_id == item_id) {
 
-                        div = '<li class="cart-item mt-2 mb-2"><hr><img class="item-mini mb-2" src="' + item.image + '"><span class="ml-5">' + item.title + '</span><span class="ml-5 cart_price">$' + item.price + '</span><button id="' + item.item_id + '" class="remove btn btn-outline-danger mt-4 mr-2 float-right" type="submit"> Remove </button><button id="' + item.item_id + '" class="view btn btn-outline-warning mt-4 mr-2 float-right" type="submit"> View </button><button id="' + item.item_id + '" class="contact btn btn-outline-secondary mt-4 mr-2 float-right" type="submit"> Contact Seller</button></li>'
+                        div = '<li class="cart-item mt-2 mb-2"><hr><img class="item-mini mb-2" src="' + item.image + '"><span class="ml-5">' + item.title + '</span><span class="ml-5 cart_price">$' + item.price + '</span><button id="' + item.item_id + '" class="remove btn btn-outline-danger mt-4 mr-2 float-right" type="submit"> Remove </button><button id="' + item.item_id + '" class="view btn btn-outline-warning mt-4 mr-2 float-right" type="submit"> View </button><button id="' + item.item_id + '" class="contact btn btn-outline-secondary mt-4 mr-2 float-right" data-toggle="modal" data-target="#contact_seller" type="submit"> Contact Seller</button></li>'
                     }
                 }
 			})
     		$('#cart').append(div)
     	})
 	}
-
-      
+    message()
     remove()
     view()
 }
@@ -114,6 +113,74 @@ var set_previous = function() {
     console.log(pathname)
 
     console.log(localStorage.getItem("previous"))
+}
+
+var send_message = function(message){
+    var message_to_send = message
+    $.ajax({
+        type: "POST",
+        url: "/send_message",                
+        dataType : "json",
+        contentType: "application/json; charset=utf-8",
+        data : JSON.stringify(message_to_send),
+        success: function(result){
+            console.log(result);
+            $('.close_modal').click()
+            sent_flash()
+        },
+        error: function(request, status, error){
+            error_flash()
+            console.log("Error");
+            console.log(request)
+            console.log(status)
+            console.log(error)
+        }
+    });
+}
+
+var message = function(){
+
+    var form = $('#add_item_form')
+
+    form.validate()
+
+    $('.send').on('click', function(e){
+
+        e.preventDefault()
+
+        var message_text = $.trim($('textarea#contact_seller_message').val()).replace(/\"/g, "\\\"").replace(/\n/g, "\\n")
+        var user_id = current_user.user_id
+        var seller = item.user_id
+
+        var new_message = jQuery.parseJSON( '{ "message_text": "' + message_text + '", "user_id": "' + user_id + '", "seller": "' + seller + '" }')
+
+        send_message(new_message)
+    })
+
+}
+
+var sent_flash = function(){
+
+    $('#sent_flash').removeClass('alert_show')
+    $('#sent_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#sent_flash').removeClass('alert_show')
+        $('#sent_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var error_flash = function(){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
 }
 
 $(document).ready(function(){
