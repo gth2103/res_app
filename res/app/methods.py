@@ -1,6 +1,5 @@
 import os, json
 from flask import request
-from app.items import items
 from ast import literal_eval
 
 def read_data(file_name):
@@ -38,6 +37,8 @@ def search(list_name, search_list_out, search_list_in):
 					add_to_list(list_name, search_list_out, item, len(search_list_out))
 
 def add_data(index):
+	items = read_data("items")
+
 	current_user = read_data("current_user")
 
 	user_id = get_value(current_user, 'user_id')
