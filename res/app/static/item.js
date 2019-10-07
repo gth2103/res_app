@@ -201,7 +201,9 @@ var delete_item = function(){
 
         var item_id = $(this).attr("id")
 
-        del_item(item_id)
+        if(confirm("Are you sure you would like to delete this item?")){
+            del_item(item_id)
+        }
     })
 }
 
