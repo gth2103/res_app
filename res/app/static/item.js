@@ -113,7 +113,7 @@ var add_item_to_cart = function(new_item){
 	var item_to_add = new_item
     $.ajax({
         type: "POST",
-        url: "add_to_cart",                
+        url: "/add_to_cart",                
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(item_to_add),
