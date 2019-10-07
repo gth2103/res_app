@@ -50,6 +50,10 @@ ul {
   list-style-type: square;
 }
 
+li{
+    width: 100%;
+}
+
 
 
 .alert_flash {
@@ -272,6 +276,25 @@ ul {
 .cart_price {
     color: red;
     font-size: 18px;
+}
+
+.cart_title{
+    max-width: 300px;
+}
+
+.cart_remove {
+    top: 40px;
+    right: 10px;
+}
+
+.cart_view {
+    top: 40px;
+    right: 100px;
+}
+
+.cart_contact {
+    top: 40px;
+    right: 170px;
 }
 
 .text-muted {
