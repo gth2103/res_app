@@ -6,6 +6,7 @@ from ast import literal_eval
 current_user = read_data("current_user")
 
 def add_data(index):
+	global current_user
 
 	user_id = get_value(current_user, 'user_id')
 
