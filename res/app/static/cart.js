@@ -1,3 +1,5 @@
+var item;
+
 
 var get_cart_items = function(){
 
@@ -28,6 +30,21 @@ var get_cart_items = function(){
     message()
     remove()
     view()
+    get_id()
+}
+
+var get_id = function(){
+
+    $('.contact').on('click', function(){
+
+        var id = $(this).attr('id')
+
+        items.forEach(function(element){
+            if(element.id == id){
+                item = element;
+            }
+        })
+    })
 }
 
 var remove_from_cart = function(item_id){
@@ -66,7 +83,7 @@ var view_item = function(item_id){
         type: "POST",
         url: "view_item/" + item_id,                
         success: function(result){
-        	window.location = '../item/' + item_id
+        	window.location = '/item/' + item_id
         },
         error: function(request, status, error){
         	alert("Oops! Something went wrong. Please try again.")
@@ -95,7 +112,7 @@ var view = function(){
 var home = function(){
 
 	$('.home').on('click', function(){
-		window.location = '../'
+		window.location = '/'
 	})
 }
 
