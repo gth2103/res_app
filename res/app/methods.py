@@ -92,6 +92,7 @@ def add_to_list(list_name, item_list, item, index):
 		if int(index) < len(item_list):
 			item_list.pop(int(index))
 		item_list.insert(int(index), item)
+		print(list_name)
 		write_data(list_name, item_list)
 
 def get_value(json_object, key_string):
