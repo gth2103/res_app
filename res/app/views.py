@@ -54,7 +54,7 @@ def cart():
 
 	cart_items = get_value(current_user, 'buyer')
 
-	return render_template('cart.html', cart_items = cart_items, items = items)
+	return render_template('cart.html', cart_items = cart_items, items = items, current_user = current_user)
 
 @app.route('/buy', methods=['GET', 'POST'])
 def buy():
