@@ -53,7 +53,7 @@ var remove_from_cart = function(item_id){
         url: "remove_from_cart/" + item_id,                
         success: function(result){
             remove_flash()
-            setTimout(function(){
+            setTimeout(function(){
                 window.location.reload()
             }, 4000)
         	
