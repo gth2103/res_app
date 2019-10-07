@@ -2,6 +2,7 @@ import os, json
 from flask import request
 from app.items import items
 from ast import literal_eval
+from app.views import current_user
 
 def read_data(file_name):
 	print(file_name)
@@ -13,8 +14,6 @@ def read_data(file_name):
 		file_in.close()
 		return file_content
 	return []
-
-current_user = read_data("current_user")
 
 def add_data(index):
 	global current_user
