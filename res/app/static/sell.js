@@ -55,6 +55,7 @@ var search = function(input){
             getItems(sellers_search_items)
         },
         error: function(request, status, error){
+            error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -95,10 +96,14 @@ var  del_item = function(item_id) {
         type: "POST",
         url: "/delete/" + item_id,                
         success: function(result){
-            window.location = '/sell'
+            delete_flash()
+            setTimeout(function(){
+              window.location = '/sell'  
+          }, 4000)
+            
         },
         error: function(request, status, error){
-            alert("Oops! Something went wrong. Please try again.")
+            error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -140,7 +145,7 @@ var view_item = function(item_id){
             window.location = '/item/' + item_id
         },
         error: function(request, status, error){
-            alert("Oops! Something went wrong. Please try again.")
+            error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -170,6 +175,30 @@ var set_previous = function() {
     console.log(pathname)
 
     console.log(localStorage.getItem("previous"))
+}
+
+var error_flash = function(){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var delete_flash = function(){
+
+    $('#delete_flash').removeClass('alert_show')
+    $('#delete_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#delete_flash').removeClass('alert_show')
+        $('#delete_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
 }
 
 $(document).ready(function(){

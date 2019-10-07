@@ -158,6 +158,18 @@ var error_flash = function(){
     }, 3500)
 }
 
+var delete_flash = function(){
+
+    $('#delete_flash').removeClass('alert_show')
+    $('#delete_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#delete_flash').removeClass('alert_show')
+        $('#delete_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
 var home = function(){
 
 	$('.home').on('click', function(){
@@ -182,7 +194,11 @@ var  del_item = function(item_id) {
         type: "POST",
         url: "/delete/" + item_id,                
         success: function(result){
-            window.location = '/sell'
+            delete_flash()
+            setTimeout(function(){
+               window.location = '/sell' 
+           }, 4000)
+            
         },
         error: function(request, status, error){
             error_flash()

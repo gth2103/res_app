@@ -2,24 +2,48 @@ var update_item = function(new_item){
 	var item_to_add = new_item
     $.ajax({
         type: "POST",
-        url: '../update_item/' + new_item.item_id,                
+        url: '/update_item/' + new_item.item_id,                
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(item_to_add),
         success: function(result){
-            window.location = '../sell'
-            console.log(result);
-            var all_items = result["items"]
-            alert("Your item has been added.")
+            update_flash()
+            setTimeout(function(){
+                window.location = '/sell'
+            }, 4000) 
         },
         error: function(request, status, error){
-        	alert("Oops! Something went wrong. Please try again.")
+        	error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
             console.log(error)
         }
     });
+}
+
+var error_flash = function(){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var update_flash = function(){
+
+    $('#update_flash').removeClass('alert_show')
+    $('#update_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#update_flash').removeClass('alert_show')
+        $('#update_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
 }
 
 var submit = function(){

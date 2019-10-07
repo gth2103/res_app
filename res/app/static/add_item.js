@@ -7,12 +7,13 @@ var add_item = function(new_item){
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(item_to_add),
         success: function(result){
-            console.log(result);
-            var all_items = result["items"]
-            alert("Your item has been added.")
+            new_flash()
+            setTimeout(function(){
+                window.location = "/sell"
+            }, 4000)     
         },
         error: function(request, status, error){
-        	alert("Oops! Something went wrong. Please try again.")
+        	error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -21,6 +22,29 @@ var add_item = function(new_item){
     });
 }
 
+var error_flash = function(){
+
+    $('#error_flash').removeClass('alert_show')
+    $('#error_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#error_flash').removeClass('alert_show')
+        $('#error_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
+var new_flash = function(){
+
+    $('#new_flash').removeClass('alert_show')
+    $('#new_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#new_flash').removeClass('alert_show')
+        $('#new_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
 
 
 var get_previous = function(){

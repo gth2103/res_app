@@ -52,10 +52,14 @@ var remove_from_cart = function(item_id){
         type: "POST",
         url: "remove_from_cart/" + item_id,                
         success: function(result){
-        	window.location.reload()
+            remove_flash()
+            setTimout(function(){
+                window.location.reload()
+            }, 4000)
+        	
         },
         error: function(request, status, error){
-        	alert("Oops! Something went wrong. Please try again.")
+        	error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -86,7 +90,7 @@ var view_item = function(item_id){
         	window.location = '/item/' + item_id
         },
         error: function(request, status, error){
-        	alert("Oops! Something went wrong. Please try again.")
+        	error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
@@ -187,6 +191,19 @@ var sent_flash = function(){
         clearTimeout(flash_timer)
     }, 3500)
 }
+
+var remove_flash = function(){
+
+    $('#remove_flash').removeClass('alert_show')
+    $('#remove_flash').addClass('alert_show')
+
+    var flash_timer = setTimeout(function(){
+        $('#remove_flash').removeClass('alert_show')
+        $('#remove_flash').addClass('alert_hide')
+        clearTimeout(flash_timer)
+    }, 3500)
+}
+
 
 var error_flash = function(){
 

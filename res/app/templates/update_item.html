@@ -1,5 +1,18 @@
 {% extends 'base.html' %}
 {% block content %}
+<div id="error_flash" class="alert_flash alert pt-4 text-center text-light font-weight-bold position-fixed bg-info overflow-auto">
+    <p>
+        Ooops! Well this is embarrasing... 
+    </p>
+    <p>
+        Something went wrong. Please try again.
+    </p>
+</div>
+<div id="update_flash" class="alert_flash alert pt-4 text-center text-light font-weight-bold position-fixed bg-info overflow-auto">
+    <p>
+        You successfully updated your listing!
+    </p>
+</div>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <img class="brand-img ml-4" src="../static/images/brand_img.png">
     <a class="navbar-brand brand" href="../">
