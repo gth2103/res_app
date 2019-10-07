@@ -2,7 +2,7 @@ var add_item = function(new_item){
 	var item_to_add = new_item
     $.ajax({
         type: "POST",
-        url: "add_item",                
+        url: "/add_item",                
         dataType : "json",
         contentType: "application/json; charset=utf-8",
         data : JSON.stringify(item_to_add),
