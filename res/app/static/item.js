@@ -166,7 +166,7 @@ var home = function(){
 var  del_item = function(item_id) {
     $.ajax({
         type: "POST",
-        url: "delete/" + item_id,                
+        url: "/delete/" + item_id,                
         success: function(result){
             window.location = '../update'
         },

@@ -93,9 +93,9 @@ var clearItems = function(){
 var  del_item = function(item_id) {
     $.ajax({
         type: "POST",
-        url: "delete/" + item_id,                
+        url: "/delete/" + item_id,                
         success: function(result){
-            window.location = '../sell'
+            window.location = '/sell'
         },
         error: function(request, status, error){
             alert("Oops! Something went wrong. Please try again.")
@@ -115,7 +115,7 @@ var update  =  function(){
 
         var item_id = $(this).attr("id")
 
-        window.location = '../update_item/' + item_id
+        window.location = '/update_item/' + item_id
     })
 }
 
@@ -137,7 +137,7 @@ var view_item = function(item_id){
         type: "POST",
         url: "view_item/" + item_id,                
         success: function(result){
-            window.location = '../item/' + item_id
+            window.location = '/item/' + item_id
         },
         error: function(request, status, error){
             alert("Oops! Something went wrong. Please try again.")
