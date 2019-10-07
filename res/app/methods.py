@@ -4,7 +4,6 @@ from app.items import items
 from ast import literal_eval
 
 def read_data(file_name):
-	print(file_name)
 	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
 		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
 		file_content_in = file_in.readlines()
