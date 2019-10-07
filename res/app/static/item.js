@@ -17,7 +17,7 @@ var setUserOptions = function(){
     }
     else {
 
-    	div = '<br><button class="add_to_cart btn btn-outline-info m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-2 m-sm-2 m-md-3 m-lg-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
+    	div = '<br><button id="' + item.item_id + '" class="add_to_cart btn btn-outline-info m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-2 m-sm-2 m-md-3 m-lg-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
     }
     $('#item-left-side').append(div);
     message()
