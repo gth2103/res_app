@@ -13,14 +13,16 @@ var setUserOptions = function(){
     })
     var div  = ""
     if (is_current_user_item){
-    	div = '<br><button class="update btn btn-outline-warning m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Update</button><button class="delete btn btn-outline-danger m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Delete</button>'
+    	div = '<br><button id="' + item.item_id + '"  class="update btn btn-outline-warning m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Update</button><button id="' + item.item_id + '"  class="delete btn btn-outline-danger m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Delete</button>'
     }
     else {
 
-    	div = '<br><button id="' + item.item_id + '" class="add_to_cart btn btn-outline-info m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Add to Cart</button><button type="submit" class="contact btn btn-outline-secondary border-0 m-2 m-sm-2 m-md-3 m-lg-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
+    	div = '<br><button id="' + item.item_id + '" class="add_to_cart btn btn-outline-info m-2 m-sm-2 m-md-3 m-lg-5" type="submit">Add to Cart</button><button id="' + item.item_id + '"  type="submit" class="contact btn btn-outline-secondary border-0 m-2 m-sm-2 m-md-3 m-lg-5" data-toggle="modal" data-target="#contact_seller">Contact Seller</button>'
     }
     $('#item-left-side').append(div);
     message()
+    update()
+    delete_item()
 }
 
 var send_message = function(message){
@@ -159,8 +161,20 @@ var error_flash = function(){
 var home = function(){
 
 	$('.home').on('click', function(){
-		window.location = '../'
+		window.location = '/'
 	})
+}
+
+var update  =  function(){
+
+    $('.update').on('click', function(e){
+
+        e.preventDefault()
+
+        var item_id = $(this).attr("id")
+
+        window.location = '/update_item/' + item_id
+    })
 }
 
 var  del_item = function(item_id) {
@@ -168,10 +182,10 @@ var  del_item = function(item_id) {
         type: "POST",
         url: "/delete/" + item_id,                
         success: function(result){
-            window.location = '../update'
+            window.location = '/sell'
         },
         error: function(request, status, error){
-            alert("Oops! Something went wrong. Please try again.")
+            error_flash()
             console.log("Error");
             console.log(request)
             console.log(status)
