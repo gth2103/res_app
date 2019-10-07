@@ -55,11 +55,15 @@ li{
 }
 
 .add-item-img {
-    width: 60px;
+    width: 40px;
     opacity: 0.9;
 }
 
-.add-item-img:hover {
+.add-item-link:hover {
+    opacity:0.9;
+}
+
+.add-item-link:hover {
     opacity: 1;
 }
 
