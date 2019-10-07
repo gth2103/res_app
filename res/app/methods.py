@@ -3,6 +3,17 @@ from flask import request
 from app.items import items
 from ast import literal_eval
 
+def read_data(file_name):
+	print(file_name)
+	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
+		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
+		file_content_in = file_in.readlines()
+		file_content_string = "".join(file_content_in)
+		file_content = literal_eval(file_content_string)
+		file_in.close()
+		return file_content
+	return []
+
 current_user = read_data("current_user")
 
 def add_data(index):
@@ -34,16 +45,6 @@ def add_data(index):
 
 	set_value(current_user, 'items_list', item_id)
 
-def read_data(file_name):
-	print(file_name)
-	if(os.stat("/home/grant/res_app/res/data/" + file_name + ".txt").st_size > 0):
-		file_in = open("/home/grant/res_app/res/data/" + file_name + ".txt", "r")
-		file_content_in = file_in.readlines()
-		file_content_string = "".join(file_content_in)
-		file_content = literal_eval(file_content_string)
-		file_in.close()
-		return file_content
-	return []
 
 def write_data(data_name, data_in):
 	file_out = open("/home/grant/res_app/res/data/" + data_name + ".txt", "w")
