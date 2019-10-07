@@ -203,19 +203,11 @@ var back = function(){
     })
 }
 
-var cart = function(){
-
-    $('.cart').on('click', function(){
-        window.location = '/cart'
-    })
-}
-
 $(document).ready(function(){
 
 	setUserOptions()
 	add_to_cart()
 	home()
     back()
-    cart()
 
 })
