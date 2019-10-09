@@ -87,14 +87,14 @@ var scroll_on_hover = function(){
 var scroll_left = function(){
 
     $('.featured_list').stop().animate({
-            scrollLeft: '+=40'
+            scrollLeft: '-=40'
         }, 'fast', 'linear', scroll_left);
 }
 
 var scroll_right = function(){
 
     $('.featured_list').stop().animate({
-            scrollLeft: '-=40'
+            scrollLeft: '+=40'
         }, 'fast', 'linear', scroll_right);
 }
 
